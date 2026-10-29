@@ -1,5 +1,7 @@
 # Video Guide · Foresight — Futuros Vivos
 
+> 📘 **Guía completa paso a paso:** [docs/guia-futuros-vivos.pdf](docs/guia-futuros-vivos.pdf) (o la versión web, [docs/guia-futuros-vivos.html](docs/guia-futuros-vivos.html)).
+
 Plantilla para convertir un **insight del informe de Foresight** en un **video corto animado** (16:9, 1920×1080), hecho con código junto a Claude.
 
 Cada cuadro del video se dibuja con código, y todo lo que se anima está **sincronizado con la voz**: los textos, los íconos y los personajes aparecen en la palabra exacta en que se dicen. Lo que ves en el navegador es exactamente lo que sale en el MP4.
