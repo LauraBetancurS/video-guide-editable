@@ -2,741 +2,1144 @@
  "source": "align_vo.py (wav2vec2-base-960h CTC)",
  "lines": [
   {
-   "text": "Este es el video demo de Futuros Vivos.",
-   "start": 3.25,
-   "end": 5.9,
+   "text": "Imagina que le pides a un asistente de IA que te compre unos tiquetes.",
+   "start": 3.26,
+   "end": 7.02,
    "words": [
     {
-     "w": "Este",
-     "start": 3.25,
-     "end": 3.74
-    },
-    {
-     "w": "es",
-     "start": 3.74,
-     "end": 3.88
-    },
-    {
-     "w": "el",
-     "start": 3.88,
-     "end": 4.02
-    },
-    {
-     "w": "video",
-     "start": 4.02,
-     "end": 4.44
-    },
-    {
-     "w": "demo",
-     "start": 4.44,
-     "end": 4.74
-    },
-    {
-     "w": "de",
-     "start": 4.74,
-     "end": 4.87
-    },
-    {
-     "w": "Futuros",
-     "start": 4.87,
-     "end": 5.48
-    },
-    {
-     "w": "Vivos.",
-     "start": 5.48,
-     "end": 5.9
-    }
-   ]
-  },
-  {
-   "text": "Aquí te mostramos cómo convertir un insight de Foresight en un video corto.",
-   "start": 6.27,
-   "end": 10.36,
-   "words": [
-    {
-     "w": "Aquí",
-     "start": 6.27,
-     "end": 6.54
-    },
-    {
-     "w": "te",
-     "start": 6.54,
-     "end": 6.66
-    },
-    {
-     "w": "mostramos",
-     "start": 6.66,
-     "end": 7.26
-    },
-    {
-     "w": "cómo",
-     "start": 7.26,
-     "end": 7.51
-    },
-    {
-     "w": "convertir",
-     "start": 7.51,
-     "end": 8.0
-    },
-    {
-     "w": "un",
-     "start": 8.0,
-     "end": 8.17
-    },
-    {
-     "w": "insight",
-     "start": 8.17,
-     "end": 8.64
-    },
-    {
-     "w": "de",
-     "start": 8.64,
-     "end": 8.8
-    },
-    {
-     "w": "Foresight",
-     "start": 8.8,
-     "end": 9.27
-    },
-    {
-     "w": "en",
-     "start": 9.42,
-     "end": 9.66
-    },
-    {
-     "w": "un",
-     "start": 9.66,
-     "end": 9.78
-    },
-    {
-     "w": "video",
-     "start": 9.78,
-     "end": 10.12
-    },
-    {
-     "w": "corto.",
-     "start": 10.12,
-     "end": 10.36
-    }
-   ]
-  },
-  {
-   "text": "Todo empieza con un insight del informe.",
-   "start": 10.96,
-   "end": 13.22,
-   "words": [
-    {
-     "w": "Todo",
-     "start": 10.96,
-     "end": 11.22
-    },
-    {
-     "w": "empieza",
-     "start": 11.22,
-     "end": 11.7
-    },
-    {
-     "w": "con",
-     "start": 11.7,
-     "end": 11.94
-    },
-    {
-     "w": "un",
-     "start": 11.94,
-     "end": 12.09
-    },
-    {
-     "w": "insight",
-     "start": 12.09,
-     "end": 12.54
-    },
-    {
-     "w": "del",
-     "start": 12.54,
-     "end": 12.72
-    },
-    {
-     "w": "informe.",
-     "start": 12.72,
-     "end": 13.22
-    }
-   ]
-  },
-  {
-   "text": "Una idea clara, con evidencia, y un dato que haga pensar.",
-   "start": 13.6,
-   "end": 17.44,
-   "words": [
-    {
-     "w": "Una",
-     "start": 13.6,
-     "end": 13.86
-    },
-    {
-     "w": "idea",
-     "start": 13.86,
-     "end": 14.09
-    },
-    {
-     "w": "clara,",
-     "start": 14.2,
-     "end": 14.49
-    },
-    {
-     "w": "con",
-     "start": 14.82,
-     "end": 15.0
-    },
-    {
-     "w": "evidencia,",
-     "start": 15.0,
-     "end": 15.69
-    },
-    {
-     "w": "y",
-     "start": 15.81,
-     "end": 15.94
-    },
-    {
-     "w": "un",
-     "start": 15.94,
-     "end": 16.16
-    },
-    {
-     "w": "dato",
-     "start": 16.16,
-     "end": 16.54
+     "w": "Imagina",
+     "start": 3.26,
+     "end": 3.72
     },
     {
      "w": "que",
-     "start": 16.54,
-     "end": 16.7
+     "start": 3.72,
+     "end": 3.86
     },
     {
-     "w": "haga",
-     "start": 16.7,
-     "end": 16.98
+     "w": "le",
+     "start": 3.86,
+     "end": 3.98
     },
     {
-     "w": "pensar.",
-     "start": 16.98,
-     "end": 17.44
-    }
-   ]
-  },
-  {
-   "text": "Primero, escribe el guion en una tabla: tiempo, voz en off, texto en pantalla y lo que se ve.",
-   "start": 17.88,
-   "end": 23.88,
-   "words": [
-    {
-     "w": "Primero,",
-     "start": 17.88,
-     "end": 18.36
+     "w": "pides",
+     "start": 3.98,
+     "end": 4.28
     },
     {
-     "w": "escribe",
-     "start": 18.48,
-     "end": 18.96
+     "w": "a",
+     "start": 4.28,
+     "end": 4.34
     },
     {
-     "w": "el",
-     "start": 18.96,
-     "end": 19.18
+     "w": "un",
+     "start": 4.34,
+     "end": 4.52
     },
     {
-     "w": "guion",
-     "start": 19.18,
-     "end": 19.42
+     "w": "asistente",
+     "start": 4.52,
+     "end": 5.12
     },
     {
-     "w": "en",
-     "start": 19.42,
-     "end": 19.56
+     "w": "de",
+     "start": 5.12,
+     "end": 5.28
     },
     {
-     "w": "una",
-     "start": 19.56,
-     "end": 19.74
-    },
-    {
-     "w": "tabla:",
-     "start": 19.74,
-     "end": 20.12
-    },
-    {
-     "w": "tiempo,",
-     "start": 20.48,
-     "end": 20.97
-    },
-    {
-     "w": "voz",
-     "start": 21.15,
-     "end": 21.46
-    },
-    {
-     "w": "en",
-     "start": 21.46,
-     "end": 21.62
-    },
-    {
-     "w": "off,",
-     "start": 21.62,
-     "end": 21.8
-    },
-    {
-     "w": "texto",
-     "start": 22.14,
-     "end": 22.46
-    },
-    {
-     "w": "en",
-     "start": 22.46,
-     "end": 22.56
-    },
-    {
-     "w": "pantalla",
-     "start": 22.56,
-     "end": 23.1
-    },
-    {
-     "w": "y",
-     "start": 23.25,
-     "end": 23.36
-    },
-    {
-     "w": "lo",
-     "start": 23.36,
-     "end": 23.44
-    },
-    {
-     "w": "que",
-     "start": 23.44,
-     "end": 23.58
-    },
-    {
-     "w": "se",
-     "start": 23.58,
-     "end": 23.74
-    },
-    {
-     "w": "ve.",
-     "start": 23.74,
-     "end": 23.88
-    }
-   ]
-  },
-  {
-   "text": "Después, genera la voz en ElevenLabs y guárdala en la carpeta de audio.",
-   "start": 24.32,
-   "end": 28.43,
-   "words": [
-    {
-     "w": "Después,",
-     "start": 24.32,
-     "end": 25.0
-    },
-    {
-     "w": "genera",
-     "start": 25.0,
-     "end": 25.44
-    },
-    {
-     "w": "la",
-     "start": 25.44,
-     "end": 25.58
-    },
-    {
-     "w": "voz",
-     "start": 25.58,
-     "end": 25.84
-    },
-    {
-     "w": "en",
-     "start": 25.84,
-     "end": 25.98
-    },
-    {
-     "w": "ElevenLabs",
-     "start": 25.98,
-     "end": 26.79,
+     "w": "IA",
+     "start": 5.28,
+     "end": 5.64,
      "syl": [
       [
-       25.98,
-       26.42
+       5.28,
+       5.46
       ],
       [
-       26.42,
-       26.79
+       5.46,
+       5.64
       ]
      ]
     },
     {
-     "w": "y",
-     "start": 26.79,
-     "end": 26.98
+     "w": "que",
+     "start": 5.64,
+     "end": 5.78
     },
     {
-     "w": "guárdala",
-     "start": 26.98,
-     "end": 27.38
+     "w": "te",
+     "start": 5.78,
+     "end": 5.85
     },
     {
-     "w": "en",
-     "start": 27.38,
-     "end": 27.5
+     "w": "compre",
+     "start": 5.94,
+     "end": 6.3
     },
     {
-     "w": "la",
-     "start": 27.5,
-     "end": 27.64
+     "w": "unos",
+     "start": 6.3,
+     "end": 6.5
     },
     {
-     "w": "carpeta",
-     "start": 27.64,
-     "end": 28.12
-    },
-    {
-     "w": "de",
-     "start": 28.12,
-     "end": 28.26
-    },
-    {
-     "w": "audio.",
-     "start": 28.26,
-     "end": 28.43
+     "w": "tiquetes.",
+     "start": 6.5,
+     "end": 7.02
     }
    ]
   },
   {
-   "text": "El sistema encuentra el momento exacto de cada palabra.",
-   "start": 28.94,
-   "end": 32.22,
+   "text": "Sabes que es tu agente.",
+   "start": 7.29,
+   "end": 8.43,
    "words": [
     {
-     "w": "El",
-     "start": 28.94,
-     "end": 29.1
+     "w": "Sabes",
+     "start": 7.29,
+     "end": 7.68
     },
     {
-     "w": "sistema",
-     "start": 29.1,
-     "end": 29.64
+     "w": "que",
+     "start": 7.68,
+     "end": 7.86
     },
     {
-     "w": "encuentra",
-     "start": 29.64,
-     "end": 30.12
+     "w": "es",
+     "start": 7.86,
+     "end": 7.94
     },
     {
-     "w": "el",
-     "start": 30.12,
-     "end": 30.26
+     "w": "tu",
+     "start": 7.94,
+     "end": 8.1
     },
     {
-     "w": "momento",
-     "start": 30.26,
-     "end": 30.7
-    },
-    {
-     "w": "exacto",
-     "start": 30.7,
-     "end": 31.3
-    },
-    {
-     "w": "de",
-     "start": 31.3,
-     "end": 31.39
-    },
-    {
-     "w": "cada",
-     "start": 31.54,
-     "end": 31.89
-    },
-    {
-     "w": "palabra.",
-     "start": 31.89,
-     "end": 32.22
+     "w": "agente.",
+     "start": 8.1,
+     "end": 8.43
     }
    ]
   },
   {
-   "text": "Luego, con Claude, describe cada escena con tus palabras.",
-   "start": 32.74,
-   "end": 35.99,
+   "text": "Pero, ¿sabes hasta dónde puede gastar, con qué tarjeta y si debía preguntarte antes?",
+   "start": 8.72,
+   "end": 14.45,
    "words": [
     {
-     "w": "Luego,",
-     "start": 32.74,
-     "end": 33.15
+     "w": "Pero,",
+     "start": 8.72,
+     "end": 9.24
+    },
+    {
+     "w": "¿sabes",
+     "start": 9.24,
+     "end": 9.68
+    },
+    {
+     "w": "hasta",
+     "start": 9.68,
+     "end": 10.04
+    },
+    {
+     "w": "dónde",
+     "start": 10.04,
+     "end": 10.43
+    },
+    {
+     "w": "puede",
+     "start": 10.43,
+     "end": 10.74
+    },
+    {
+     "w": "gastar,",
+     "start": 10.74,
+     "end": 11.22
     },
     {
      "w": "con",
-     "start": 33.26,
-     "end": 33.47
+     "start": 11.48,
+     "end": 11.73
     },
     {
-     "w": "Claude,",
-     "start": 33.47,
-     "end": 33.78
+     "w": "qué",
+     "start": 11.73,
+     "end": 11.92
     },
     {
-     "w": "describe",
-     "start": 33.93,
-     "end": 34.46
-    },
-    {
-     "w": "cada",
-     "start": 34.58,
-     "end": 34.86
-    },
-    {
-     "w": "escena",
-     "start": 34.86,
-     "end": 35.28
-    },
-    {
-     "w": "con",
-     "start": 35.28,
-     "end": 35.44
-    },
-    {
-     "w": "tus",
-     "start": 35.44,
-     "end": 35.64
-    },
-    {
-     "w": "palabras.",
-     "start": 35.64,
-     "end": 35.99
-    }
-   ]
-  },
-  {
-   "text": "Claude la programa: textos, íconos, personajes y animaciones, sincronizados con la voz.",
-   "start": 36.57,
-   "end": 42.71,
-   "words": [
-    {
-     "w": "Claude",
-     "start": 36.57,
-     "end": 36.92
-    },
-    {
-     "w": "la",
-     "start": 36.92,
-     "end": 37.11
-    },
-    {
-     "w": "programa:",
-     "start": 37.11,
-     "end": 37.64
-    },
-    {
-     "w": "textos,",
-     "start": 38.0,
-     "end": 38.62
-    },
-    {
-     "w": "íconos,",
-     "start": 38.76,
-     "end": 39.38
-    },
-    {
-     "w": "personajes",
-     "start": 39.38,
-     "end": 40.12
+     "w": "tarjeta",
+     "start": 11.92,
+     "end": 12.57
     },
     {
      "w": "y",
-     "start": 40.12,
-     "end": 40.22
+     "start": 12.57,
+     "end": 12.78
     },
     {
-     "w": "animaciones,",
-     "start": 40.22,
-     "end": 40.95
+     "w": "si",
+     "start": 12.78,
+     "end": 13.12
     },
     {
-     "w": "sincronizados",
-     "start": 41.17,
-     "end": 42.1
+     "w": "debía",
+     "start": 13.12,
+     "end": 13.42
     },
     {
-     "w": "con",
-     "start": 42.1,
-     "end": 42.26
+     "w": "preguntarte",
+     "start": 13.42,
+     "end": 14.06
     },
     {
-     "w": "la",
-     "start": 42.26,
-     "end": 42.38
-    },
-    {
-     "w": "voz.",
-     "start": 42.38,
-     "end": 42.71
+     "w": "antes?",
+     "start": 14.06,
+     "end": 14.45
     }
    ]
   },
   {
-   "text": "Revisa el resultado en el navegador, pide ajustes, y exporta el video con un solo comando.",
-   "start": 43.09,
-   "end": 48.67,
+   "text": "Identificar a un agente ya no es suficiente.",
+   "start": 14.74,
+   "end": 17.19,
    "words": [
     {
-     "w": "Revisa",
-     "start": 43.09,
-     "end": 43.5
-    },
-    {
-     "w": "el",
-     "start": 43.5,
-     "end": 43.6
-    },
-    {
-     "w": "resultado",
-     "start": 43.6,
-     "end": 44.12
-    },
-    {
-     "w": "en",
-     "start": 44.12,
-     "end": 44.26
-    },
-    {
-     "w": "el",
-     "start": 44.26,
-     "end": 44.34
-    },
-    {
-     "w": "navegador,",
-     "start": 44.34,
-     "end": 44.89
-    },
-    {
-     "w": "pide",
-     "start": 45.24,
-     "end": 45.46
-    },
-    {
-     "w": "ajustes,",
-     "start": 45.46,
-     "end": 46.02
-    },
-    {
-     "w": "y",
-     "start": 46.27,
-     "end": 46.42
-    },
-    {
-     "w": "exporta",
-     "start": 46.42,
-     "end": 46.82
-    },
-    {
-     "w": "el",
-     "start": 46.82,
-     "end": 47.0
-    },
-    {
-     "w": "video",
-     "start": 47.0,
-     "end": 47.4
-    },
-    {
-     "w": "con",
-     "start": 47.4,
-     "end": 47.7
-    },
-    {
-     "w": "un",
-     "start": 47.7,
-     "end": 47.9
-    },
-    {
-     "w": "solo",
-     "start": 47.9,
-     "end": 48.2
-    },
-    {
-     "w": "comando.",
-     "start": 48.2,
-     "end": 48.67
-    }
-   ]
-  },
-  {
-   "text": "Del informe a un video, en una tarde.",
-   "start": 49.03,
-   "end": 51.35,
-   "words": [
-    {
-     "w": "Del",
-     "start": 49.03,
-     "end": 49.26
-    },
-    {
-     "w": "informe",
-     "start": 49.26,
-     "end": 49.78
+     "w": "Identificar",
+     "start": 14.74,
+     "end": 15.24
     },
     {
      "w": "a",
-     "start": 49.78,
-     "end": 49.84
+     "start": 15.24,
+     "end": 15.44
     },
     {
      "w": "un",
-     "start": 49.84,
-     "end": 50.02
+     "start": 15.44,
+     "end": 15.62
     },
     {
-     "w": "video,",
-     "start": 50.02,
-     "end": 50.46
+     "w": "agente",
+     "start": 15.62,
+     "end": 16.18
     },
     {
-     "w": "en",
-     "start": 50.62,
-     "end": 50.9
+     "w": "ya",
+     "start": 16.18,
+     "end": 16.44
     },
     {
-     "w": "una",
-     "start": 50.9,
-     "end": 51.16
+     "w": "no",
+     "start": 16.44,
+     "end": 16.58
     },
     {
-     "w": "tarde.",
-     "start": 51.16,
-     "end": 51.35
+     "w": "es",
+     "start": 16.58,
+     "end": 16.68
+    },
+    {
+     "w": "suficiente.",
+     "start": 16.68,
+     "end": 17.19
     }
    ]
   },
   {
-   "text": "Futuros Vivos, por InnLab.",
-   "start": 51.91,
-   "end": 53.94,
+   "text": "Según Experian, en 2026 el fraude a través de agentes de IA es el riesgo número uno.",
+   "start": 17.67,
+   "end": 23.85,
    "words": [
     {
-     "w": "Futuros",
-     "start": 51.91,
-     "end": 52.5
+     "w": "Según",
+     "start": 17.67,
+     "end": 18.04
     },
     {
-     "w": "Vivos,",
-     "start": 52.5,
+     "w": "Experian,",
+     "start": 18.04,
+     "end": 18.75
+    },
+    {
+     "w": "en",
+     "start": 18.75,
+     "end": 18.9
+    },
+    {
+     "w": "2026",
+     "start": 18.9,
+     "end": 20.04,
+     "syl": [
+      [
+       18.9,
+       19.1
+      ],
+      [
+       19.1,
+       19.32
+      ],
+      [
+       19.32,
+       20.04
+      ]
+     ]
+    },
+    {
+     "w": "el",
+     "start": 20.04,
+     "end": 20.21
+    },
+    {
+     "w": "fraude",
+     "start": 20.21,
+     "end": 20.66
+    },
+    {
+     "w": "a",
+     "start": 20.66,
+     "end": 20.72
+    },
+    {
+     "w": "través",
+     "start": 20.72,
+     "end": 21.08
+    },
+    {
+     "w": "de",
+     "start": 21.08,
+     "end": 21.24
+    },
+    {
+     "w": "agentes",
+     "start": 21.24,
+     "end": 21.62
+    },
+    {
+     "w": "de",
+     "start": 21.62,
+     "end": 21.78
+    },
+    {
+     "w": "IA",
+     "start": 21.78,
+     "end": 22.17,
+     "syl": [
+      [
+       21.78,
+       21.98
+      ],
+      [
+       21.98,
+       22.17
+      ]
+     ]
+    },
+    {
+     "w": "es",
+     "start": 22.17,
+     "end": 22.32
+    },
+    {
+     "w": "el",
+     "start": 22.32,
+     "end": 22.54
+    },
+    {
+     "w": "riesgo",
+     "start": 22.54,
+     "end": 23.08
+    },
+    {
+     "w": "número",
+     "start": 23.08,
+     "end": 23.64
+    },
+    {
+     "w": "uno.",
+     "start": 23.64,
+     "end": 23.85
+    }
+   ]
+  },
+  {
+   "text": "Los deepfakes son el número dos.",
+   "start": 24.13,
+   "end": 26.13,
+   "words": [
+    {
+     "w": "Los",
+     "start": 24.13,
+     "end": 24.34
+    },
+    {
+     "w": "deepfakes",
+     "start": 24.34,
+     "end": 25.01,
+     "syl": [
+      [
+       24.34,
+       24.51
+      ],
+      [
+       24.62,
+       25.01
+      ]
+     ]
+    },
+    {
+     "w": "son",
+     "start": 25.01,
+     "end": 25.3
+    },
+    {
+     "w": "el",
+     "start": 25.3,
+     "end": 25.44
+    },
+    {
+     "w": "número",
+     "start": 25.44,
+     "end": 25.8
+    },
+    {
+     "w": "dos.",
+     "start": 25.8,
+     "end": 26.13
+    }
+   ]
+  },
+  {
+   "text": "Y grandes comercios como Amazon ya están bloqueando a los agentes de terceros.",
+   "start": 26.32,
+   "end": 30.22,
+   "words": [
+    {
+     "w": "Y",
+     "start": 26.32,
+     "end": 26.48
+    },
+    {
+     "w": "grandes",
+     "start": 26.48,
+     "end": 26.9
+    },
+    {
+     "w": "comercios",
+     "start": 26.9,
+     "end": 27.38
+    },
+    {
+     "w": "como",
+     "start": 27.38,
+     "end": 27.72
+    },
+    {
+     "w": "Amazon",
+     "start": 27.72,
+     "end": 28.18
+    },
+    {
+     "w": "ya",
+     "start": 28.18,
+     "end": 28.38
+    },
+    {
+     "w": "están",
+     "start": 28.38,
+     "end": 28.64
+    },
+    {
+     "w": "bloqueando",
+     "start": 28.64,
+     "end": 29.12
+    },
+    {
+     "w": "a",
+     "start": 29.12,
+     "end": 29.2
+    },
+    {
+     "w": "los",
+     "start": 29.2,
+     "end": 29.36
+    },
+    {
+     "w": "agentes",
+     "start": 29.36,
+     "end": 29.76
+    },
+    {
+     "w": "de",
+     "start": 29.76,
+     "end": 29.88
+    },
+    {
+     "w": "terceros.",
+     "start": 29.88,
+     "end": 30.22
+    }
+   ]
+  },
+  {
+   "text": "El reto pasa de autenticar a gobernar la delegación.",
+   "start": 30.8,
+   "end": 34.14,
+   "words": [
+    {
+     "w": "El",
+     "start": 30.8,
+     "end": 31.0
+    },
+    {
+     "w": "reto",
+     "start": 31.0,
+     "end": 31.3
+    },
+    {
+     "w": "pasa",
+     "start": 31.3,
+     "end": 31.6
+    },
+    {
+     "w": "de",
+     "start": 31.6,
+     "end": 31.72
+    },
+    {
+     "w": "autenticar",
+     "start": 31.72,
+     "end": 32.45
+    },
+    {
+     "w": "a",
+     "start": 32.56,
+     "end": 32.74
+    },
+    {
+     "w": "gobernar",
+     "start": 32.74,
+     "end": 33.18
+    },
+    {
+     "w": "la",
+     "start": 33.18,
+     "end": 33.34
+    },
+    {
+     "w": "delegación.",
+     "start": 33.34,
+     "end": 34.14
+    }
+   ]
+  },
+  {
+   "text": "Eso quiere decir definir qué puede hacer el agente: hasta qué monto, en qué comercios, en qué horarios y cuándo debe escalarle la decisión a la persona.",
+   "start": 34.47,
+   "end": 43.78,
+   "words": [
+    {
+     "w": "Eso",
+     "start": 34.47,
+     "end": 34.7
+    },
+    {
+     "w": "quiere",
+     "start": 34.7,
+     "end": 34.96
+    },
+    {
+     "w": "decir",
+     "start": 34.96,
+     "end": 35.34
+    },
+    {
+     "w": "definir",
+     "start": 35.34,
+     "end": 35.82
+    },
+    {
+     "w": "qué",
+     "start": 35.98,
+     "end": 36.14
+    },
+    {
+     "w": "puede",
+     "start": 36.14,
+     "end": 36.46
+    },
+    {
+     "w": "hacer",
+     "start": 36.46,
+     "end": 36.72
+    },
+    {
+     "w": "el",
+     "start": 36.72,
+     "end": 36.86
+    },
+    {
+     "w": "agente:",
+     "start": 36.86,
+     "end": 37.16
+    },
+    {
+     "w": "hasta",
+     "start": 37.55,
+     "end": 37.9
+    },
+    {
+     "w": "qué",
+     "start": 37.9,
+     "end": 38.12
+    },
+    {
+     "w": "monto,",
+     "start": 38.12,
+     "end": 38.6
+    },
+    {
+     "w": "en",
+     "start": 38.7,
+     "end": 38.92
+    },
+    {
+     "w": "qué",
+     "start": 38.92,
+     "end": 39.11
+    },
+    {
+     "w": "comercios,",
+     "start": 39.11,
+     "end": 39.77
+    },
+    {
+     "w": "en",
+     "start": 39.87,
+     "end": 40.1
+    },
+    {
+     "w": "qué",
+     "start": 40.1,
+     "end": 40.32
+    },
+    {
+     "w": "horarios",
+     "start": 40.32,
+     "end": 40.77
+    },
+    {
+     "w": "y",
+     "start": 41.04,
+     "end": 41.13
+    },
+    {
+     "w": "cuándo",
+     "start": 41.24,
+     "end": 41.68
+    },
+    {
+     "w": "debe",
+     "start": 41.68,
+     "end": 41.9
+    },
+    {
+     "w": "escalarle",
+     "start": 41.9,
+     "end": 42.46
+    },
+    {
+     "w": "la",
+     "start": 42.46,
+     "end": 42.6
+    },
+    {
+     "w": "decisión",
+     "start": 42.6,
+     "end": 43.12
+    },
+    {
+     "w": "a",
+     "start": 43.12,
+     "end": 43.2
+    },
+    {
+     "w": "la",
+     "start": 43.2,
+     "end": 43.3
+    },
+    {
+     "w": "persona.",
+     "start": 43.3,
+     "end": 43.78
+    }
+   ]
+  },
+  {
+   "text": "Y cada acción tiene que quedar registrada: qué pidió el usuario, qué interpretó el agente y qué ejecutó al final.",
+   "start": 44.02,
+   "end": 51.02,
+   "words": [
+    {
+     "w": "Y",
+     "start": 44.02,
+     "end": 44.11
+    },
+    {
+     "w": "cada",
+     "start": 44.24,
+     "end": 44.54
+    },
+    {
+     "w": "acción",
+     "start": 44.54,
+     "end": 45.08
+    },
+    {
+     "w": "tiene",
+     "start": 45.08,
+     "end": 45.4
+    },
+    {
+     "w": "que",
+     "start": 45.4,
+     "end": 45.54
+    },
+    {
+     "w": "quedar",
+     "start": 45.54,
+     "end": 45.9
+    },
+    {
+     "w": "registrada:",
+     "start": 45.9,
+     "end": 46.5
+    },
+    {
+     "w": "qué",
+     "start": 46.8,
+     "end": 47.0
+    },
+    {
+     "w": "pidió",
+     "start": 47.0,
+     "end": 47.26
+    },
+    {
+     "w": "el",
+     "start": 47.26,
+     "end": 47.4
+    },
+    {
+     "w": "usuario,",
+     "start": 47.4,
+     "end": 47.93
+    },
+    {
+     "w": "qué",
+     "start": 48.16,
+     "end": 48.28
+    },
+    {
+     "w": "interpretó",
+     "start": 48.28,
+     "end": 48.86
+    },
+    {
+     "w": "el",
+     "start": 48.86,
+     "end": 49.0
+    },
+    {
+     "w": "agente",
+     "start": 49.0,
+     "end": 49.58
+    },
+    {
+     "w": "y",
+     "start": 49.58,
+     "end": 49.6
+    },
+    {
+     "w": "qué",
+     "start": 49.84,
+     "end": 50.06
+    },
+    {
+     "w": "ejecutó",
+     "start": 50.06,
+     "end": 50.56
+    },
+    {
+     "w": "al",
+     "start": 50.56,
+     "end": 50.66
+    },
+    {
+     "w": "final.",
+     "start": 50.66,
+     "end": 51.02
+    }
+   ]
+  },
+  {
+   "text": "Para bancos y comercios hay dos extremos que evitar: bloquear toda la automatización o permitirla sin control.",
+   "start": 51.4,
+   "end": 57.92,
+   "words": [
+    {
+     "w": "Para",
+     "start": 51.4,
+     "end": 51.68
+    },
+    {
+     "w": "bancos",
+     "start": 51.68,
+     "end": 52.02
+    },
+    {
+     "w": "y",
+     "start": 52.02,
+     "end": 52.1
+    },
+    {
+     "w": "comercios",
+     "start": 52.1,
+     "end": 52.69
+    },
+    {
+     "w": "hay",
+     "start": 52.69,
      "end": 52.92
     },
     {
-     "w": "por",
-     "start": 53.18,
-     "end": 53.45
+     "w": "dos",
+     "start": 52.92,
+     "end": 53.22
     },
     {
-     "w": "InnLab.",
-     "start": 53.45,
-     "end": 53.94
+     "w": "extremos",
+     "start": 53.22,
+     "end": 53.68
+    },
+    {
+     "w": "que",
+     "start": 53.68,
+     "end": 53.82
+    },
+    {
+     "w": "evitar:",
+     "start": 53.82,
+     "end": 54.15
+    },
+    {
+     "w": "bloquear",
+     "start": 54.47,
+     "end": 54.99
+    },
+    {
+     "w": "toda",
+     "start": 55.14,
+     "end": 55.34
+    },
+    {
+     "w": "la",
+     "start": 55.34,
+     "end": 55.48
+    },
+    {
+     "w": "automatización",
+     "start": 55.48,
+     "end": 56.46
+    },
+    {
+     "w": "o",
+     "start": 56.61,
+     "end": 56.72
+    },
+    {
+     "w": "permitirla",
+     "start": 56.72,
+     "end": 57.36
+    },
+    {
+     "w": "sin",
+     "start": 57.36,
+     "end": 57.52
+    },
+    {
+     "w": "control.",
+     "start": 57.52,
+     "end": 57.92
+    }
+   ]
+  },
+  {
+   "text": "Lo que se necesita son permisos granulares según el nivel de riesgo, y no listas binarias de \"humano o bot\".",
+   "start": 58.3,
+   "end": 64.9,
+   "words": [
+    {
+     "w": "Lo",
+     "start": 58.3,
+     "end": 58.44
+    },
+    {
+     "w": "que",
+     "start": 58.44,
+     "end": 58.56
+    },
+    {
+     "w": "se",
+     "start": 58.56,
+     "end": 58.68
+    },
+    {
+     "w": "necesita",
+     "start": 58.68,
+     "end": 59.28
+    },
+    {
+     "w": "son",
+     "start": 59.28,
+     "end": 59.44
+    },
+    {
+     "w": "permisos",
+     "start": 59.44,
+     "end": 60.0
+    },
+    {
+     "w": "granulares",
+     "start": 60.0,
+     "end": 60.78
+    },
+    {
+     "w": "según",
+     "start": 60.78,
+     "end": 61.2
+    },
+    {
+     "w": "el",
+     "start": 61.2,
+     "end": 61.3
+    },
+    {
+     "w": "nivel",
+     "start": 61.3,
+     "end": 61.6
+    },
+    {
+     "w": "de",
+     "start": 61.6,
+     "end": 61.76
+    },
+    {
+     "w": "riesgo,",
+     "start": 61.76,
+     "end": 62.15
+    },
+    {
+     "w": "y",
+     "start": 62.42,
+     "end": 62.58
+    },
+    {
+     "w": "no",
+     "start": 62.58,
+     "end": 62.78
+    },
+    {
+     "w": "listas",
+     "start": 62.78,
+     "end": 63.14
+    },
+    {
+     "w": "binarias",
+     "start": 63.14,
+     "end": 63.66
+    },
+    {
+     "w": "de",
+     "start": 63.66,
+     "end": 63.94
+    },
+    {
+     "w": "\"humano",
+     "start": 63.94,
+     "end": 64.47
+    },
+    {
+     "w": "o",
+     "start": 64.57,
+     "end": 64.72
+    },
+    {
+     "w": "bot\".",
+     "start": 64.72,
+     "end": 64.9
+    }
+   ]
+  },
+  {
+   "text": "El agente confiable no será el que demuestre su identidad una sola vez.",
+   "start": 65.34,
+   "end": 69.26,
+   "words": [
+    {
+     "w": "El",
+     "start": 65.34,
+     "end": 65.48
+    },
+    {
+     "w": "agente",
+     "start": 65.48,
+     "end": 65.86
+    },
+    {
+     "w": "confiable",
+     "start": 65.86,
+     "end": 66.58
+    },
+    {
+     "w": "no",
+     "start": 66.58,
+     "end": 66.76
+    },
+    {
+     "w": "será",
+     "start": 66.76,
+     "end": 66.94
+    },
+    {
+     "w": "el",
+     "start": 66.94,
+     "end": 67.06
+    },
+    {
+     "w": "que",
+     "start": 67.06,
+     "end": 67.28
+    },
+    {
+     "w": "demuestre",
+     "start": 67.28,
+     "end": 67.68
+    },
+    {
+     "w": "su",
+     "start": 67.68,
+     "end": 67.76
+    },
+    {
+     "w": "identidad",
+     "start": 67.76,
+     "end": 68.42
+    },
+    {
+     "w": "una",
+     "start": 68.42,
+     "end": 68.72
+    },
+    {
+     "w": "sola",
+     "start": 68.72,
+     "end": 68.98
+    },
+    {
+     "w": "vez.",
+     "start": 68.98,
+     "end": 69.26
+    }
+   ]
+  },
+  {
+   "text": "Será el que pueda probar, en cada acción, que actúa con un mandato vigente, limitado y revocable.",
+   "start": 69.45,
+   "end": 75.76,
+   "words": [
+    {
+     "w": "Será",
+     "start": 69.45,
+     "end": 69.66
+    },
+    {
+     "w": "el",
+     "start": 69.66,
+     "end": 69.8
+    },
+    {
+     "w": "que",
+     "start": 69.8,
+     "end": 69.96
+    },
+    {
+     "w": "pueda",
+     "start": 69.96,
+     "end": 70.26
+    },
+    {
+     "w": "probar,",
+     "start": 70.26,
+     "end": 70.64
+    },
+    {
+     "w": "en",
+     "start": 70.84,
+     "end": 71.02
+    },
+    {
+     "w": "cada",
+     "start": 71.12,
+     "end": 71.44
+    },
+    {
+     "w": "acción,",
+     "start": 71.44,
+     "end": 71.91
+    },
+    {
+     "w": "que",
+     "start": 72.16,
+     "end": 72.32
+    },
+    {
+     "w": "actúa",
+     "start": 72.32,
+     "end": 72.64
+    },
+    {
+     "w": "con",
+     "start": 72.64,
+     "end": 72.8
+    },
+    {
+     "w": "un",
+     "start": 72.8,
+     "end": 72.92
+    },
+    {
+     "w": "mandato",
+     "start": 72.92,
+     "end": 73.38
+    },
+    {
+     "w": "vigente,",
+     "start": 73.38,
+     "end": 74.08
+    },
+    {
+     "w": "limitado",
+     "start": 74.18,
+     "end": 74.97
+    },
+    {
+     "w": "y",
+     "start": 74.97,
+     "end": 75.14
+    },
+    {
+     "w": "revocable.",
+     "start": 75.14,
+     "end": 75.76
     }
    ]
   }
