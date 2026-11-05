@@ -1,3 +1,5 @@
+// 👉 AQUÍ SE REEMPLAZA ESTE CONTENIDO
+// Esta escena es del VIDEO DEMO: bórrala o cámbiala por la de tu video (y actualiza SCENES en video.config.ts).
 // ESCENA 3 — El guion (fondo papel)
 // Voz: "Primero, escribe el guion en una tabla: tiempo, voz en off, texto en pantalla y lo que se ve."
 // Una hoja con una tabla dibujada a marcador. Cada columna aparece cuando la voz la nombra (Tiempo ·

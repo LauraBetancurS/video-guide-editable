@@ -186,6 +186,13 @@ def main():
         while j < min(len(voiced), int(nxt * 100)) and voiced[j]:
             j += 1
         b = max(b, j / 100)
+        # CTC can stretch a word over a long silence after it (the last word before the closing silence):
+        # if its tail is unvoiced for > 0.3 s, end it where the voice stops
+        j = min(int(b * 100), len(voiced))
+        while j - 1 > int(a * 100) + 5 and not voiced[j - 1]:
+            j -= 1
+        if b - j / 100 > 0.3:
+            b = j / 100 + 0.08
         spans[key] = [a, min(b, nxt)]
     # close small gaps inside a phrase: a unit runs until the next one starts when the gap is unvoiced < 90 ms
     for k, key in enumerate(order[:-1]):

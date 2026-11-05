@@ -1,3 +1,5 @@
+// 👉 AQUÍ SE REEMPLAZA ESTE CONTENIDO
+// Esta escena es del VIDEO DEMO: bórrala o cámbiala por la de tu video (y actualiza SCENES en video.config.ts).
 // ESCENA 5 — Las escenas con Claude (fondo papel)
 // Voz: "Luego, con Claude, describe cada escena con tus palabras. Claude la programa: textos, íconos,
 // personajes y animaciones, sincronizados con la voz."
@@ -5,14 +7,14 @@
 // vista previa se arma sola con cada palabra de la voz: textos, íconos, personaje, animaciones, y al
 // final una línea de tiempo con la onda de la voz.
 import type { Frame, PostOverrides } from '../engine/scene';
-import { C, Plate, Cutout, type CutKey, at, burst, clamp, decor, doodle, ease, hexA, icon, inn, pop, rrect, tape, text, tornPaper, wrap, float, vnoise, measureText } from './_kit';
+import { C, Plate, Puppet, type PupKey, at, burst, clamp, decor, doodle, ease, hexA, icon, inn, pop, rrect, tape, text, tornPaper, wrap, float, vnoise, measureText } from './_kit';
 
 const CHAT = { x: 450, y: 560, w: 600, h: 660 };
 const PREV = { x: 1270, y: 520, w: 860, h: 560 };
 
 export default class D5 extends Plate {
-  char = new Cutout();
-  keys: CutKey[] = [];
+  char = new Puppet('andres');
+  keys: PupKey[] = [];
   tAsk = 0; tProg = 0; tTxt = 0; tIco = 0; tPer = 0; tAni = 0; tSync = 0; tEnd = 0;
   override async load() { await this.char.load(); }
 
@@ -46,10 +48,10 @@ export default class D5 extends Plate {
       text(c, 'Chat con Claude', L, T, { w: 800, size: 30, col: C.azul });
       c.fillStyle = C.gris2; rrect(c, L, T + 18, CHAT.w - 80, 3, 1.5); c.fill();
       // the request, typed
-      const ask = 'Que el título entre palabra por palabra y que la personaje salude al final.';
+      const ask = 'Que el título entre palabra por palabra y que Andrés salude al final.';
       const n = Math.floor(clamp((t - this.tAsk) * 34, 0, ask.length));
       if (n > 0) {
-        const lines = wrap(c, ask, 500, 30, CHAT.w - 150);
+        const lines = wrap(c, ask, 500, 30, CHAT.w - 200);
         const h = lines.length * 40 + 36;
         c.fillStyle = C.azul; rrect(c, -CHAT.w / 2 + 110, T + 50, CHAT.w - 150, h, 20); c.fill();
         let left = n;
@@ -90,7 +92,7 @@ export default class D5 extends Plate {
       const ics = [(s: number) => icon.pin(c, s, C.naranja, true), (s: number) => icon.check(c, s * 0.42, C.verde), (s: number) => icon.clock(c, s, C.morado)];
       ics.forEach((f, i) => at(c, -PREV.w / 2 + 110 + i * 130, 30 + float(t, i, 6, 2), { s: pop(t, this.tIco + i * 0.1, 0.4) }, () => f(80)));
       // the character
-      at(c, PREV.w / 2 - 170, PREV.h / 2 - 20, { s: pop(t, this.tPer, 0.45) }, () => this.char.draw(c, 0, 0, 470, t, this.keys, { seed: 5 }));
+      at(c, PREV.w / 2 - 230, PREV.h / 2 - 20, { s: pop(t, this.tPer, 0.45) }, () => this.char.draw(c, 0, 0, 470, t, this.keys, { seed: 5 }));
       // animations: sparkles
       for (let i = 0; i < 3; i++) doodle(c, 'spark', -PREV.w / 2 + 520 + i * 40, -PREV.h / 2 + 90 + i * 30, 14 + i * 4, [C.amarillo, C.naranja, C.verde][i]!, clamp((t - this.tAni - i * 0.1) / 0.25));
       burst(c, -PREV.w / 2 + 110, 30, t, this.tAni + 0.1, C.amarillo, 70, 8);

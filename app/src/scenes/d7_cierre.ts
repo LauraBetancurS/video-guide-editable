@@ -1,3 +1,5 @@
+// 👉 AQUÍ SE REEMPLAZA ESTE CONTENIDO
+// Esta escena es del VIDEO DEMO: bórrala o cámbiala por la de tu video (y actualiza SCENES en video.config.ts).
 // ESCENA 7 — Cierre (fondo azul)
 // Voz: "Del informe a un video, en una tarde. Futuros Vivos, por InnLab."
 // La frase final llega palabra por palabra sobre tiras de papel rasgado pegadas con cinta; "tarde" se

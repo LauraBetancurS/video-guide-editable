@@ -1,3 +1,5 @@
+// 👉 AQUÍ SE REEMPLAZA ESTE CONTENIDO
+// Esta escena es del VIDEO DEMO: bórrala o cámbiala por la de tu video (y actualiza SCENES en video.config.ts).
 // ESCENA 6 — Revisar y exportar (fondo azul)
 // Voz: "Revisa el resultado en el navegador, pide ajustes, y exporta el video con un solo comando."
 // Tres pasos de papel, uno por cada verbo: 1 Revisa (navegador con play), 2 Ajusta (post-it con un pedido),

@@ -1,3 +1,5 @@
+> 👉 AQUÍ SE REEMPLAZA ESTE CONTENIDO — este es el guion del **video demo**. Para un video nuevo, copia `plantilla-guion.md` y escribe ahí el tuyo (o reemplaza este archivo).
+
 # Video demo — Cómo hacer videos de insights de Foresight
 
 **Duración aprox.:** 45–50 s · **Formato:** 16:9, 1920×1080, 30 fps · **Estilo:** identidad Icesi + acabado scrapbook

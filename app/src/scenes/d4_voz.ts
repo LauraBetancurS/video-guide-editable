@@ -1,3 +1,5 @@
+// 👉 AQUÍ SE REEMPLAZA ESTE CONTENIDO
+// Esta escena es del VIDEO DEMO: bórrala o cámbiala por la de tu video (y actualiza SCENES en video.config.ts).
 // ESCENA 4 — La voz (fondo azul)
 // Voz: "Después, genera la voz en ElevenLabs y guárdala en la carpeta de audio. El sistema encuentra el
 // momento exacto de cada palabra."

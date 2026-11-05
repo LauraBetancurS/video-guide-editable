@@ -6,21 +6,25 @@
 2. **Voz usada en el demo:** *Lina – Colombian, Warm & Confident*. Ajustes: velocidad 1.0, estabilidad 50, similitud 75.
 3. Descarga el MP3.
 
-## Ponerla en el proyecto
+## Ponerla en el proyecto y sincronizar (un solo comando)
 
 Desde la raíz del repo:
 
 ```sh
-# guarda el original y crea la versión con 3,5 s de silencio al final (para el cierre y los logos)
-cp ~/Downloads/TU_ARCHIVO.mp3 audio/voiceover_original.mp3
-ffmpeg -y -i audio/voiceover_original.mp3 -af "apad=pad_dur=3.5" -b:a 192k audio/voiceover.mp3
+uv run --no-project --with onnxruntime --with numpy python analysis/preparar_voz.py ~/Downloads/TU_ARCHIVO.mp3
 ```
 
-## Sincronizar (encontrar el momento de cada palabra)
+`preparar_voz.py` hace todo:
+1. Guarda el original en `audio/voiceover_original.mp3`.
+2. Crea `audio/voiceover.mp3` con **3,2 s de silencio al inicio** (ahí va la carátula de inicio) y **7,1 s al final** (logos + carátula de cierre).
+3. Sincroniza: encuentra el momento de cada palabra (`align_vo.py`) y analiza el audio (`audio_vo.py`).
+
+> En Windows la ruta se escribe así: `$HOME\Downloads\TU_ARCHIVO.mp3`. Si `uv` no se reconoce en Mac, usa `python -m uv run …`.
+
+Para volver a sincronizar sin cambiar la voz (por ejemplo, después de corregir `voz.txt`), córrelo sin archivo:
 
 ```sh
-python -m uv run --no-project --with onnxruntime --with numpy python analysis/align_vo.py
-python -m uv run --no-project --with numpy python analysis/audio_vo.py
+uv run --no-project --with onnxruntime --with numpy python analysis/preparar_voz.py
 ```
 
 - `align_vo.py` lee `guion/voz.txt`, escucha el audio y escribe `data/lyrics.json`, con el inicio y el fin de cada palabra. Imprime cada línea con sus tiempos: revisa que vayan en orden y tengan sentido.
@@ -46,4 +50,4 @@ Puedes trabajar las escenas antes de tener la voz:
 python3 analysis/placeholder_vo.py
 ```
 
-Calcula tiempos provisionales a partir de `guion/voz.txt` (unas 2,7 palabras por segundo) y crea un audio en silencio de la misma duración. Cuando llegue la voz real, sincroniza y todo se re-acomoda.
+Calcula tiempos provisionales a partir de `guion/voz.txt` (unas 2,7 palabras por segundo, con el mismo silencio de las carátulas) y crea un audio en silencio de la misma duración. Cuando llegue la voz real, sincroniza y todo se re-acomoda.

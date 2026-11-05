@@ -20,13 +20,18 @@ Claude lee `CLAUDE.md` automáticamente y sigue el proceso de esta plantilla.
 **Escenas (describe lo que ves, no el código)**
 > En la escena 2, que aparezca una página del informe y que un marcador amarillo resalte la frase del insight cuando la voz dice "insight". A la derecha, una lista con check que se marque con cada palabra: idea, evidencia, dato.
 
-> Usa la personaje ilustrada en la escena 4: tranquila al inicio, sorprendida en "se atrasa", preocupada cuando cae el sello y feliz al final.
+> Usa a Valentina en la escena 4: saluda al inicio, señala el dato con cara de sorpresa cuando dice "se atrasa", pone las manos en la cintura cuando cae el sello y celebra al final.
+
+> En la escena 2 pon a Camila trabajando en su escritorio, con cara de duda cuando dice "riesgo".
 
 **Ajustes**
 > El título de la escena 3 está muy pequeño, súbelo y ponle subrayado amarillo.
 > En el segundo 22 algo se tapa con el footer, revísalo.
 > Quita el temblor / el estilo scrapbook / el sacudón del sello.
 > Verifica que todo el texto en pantalla coincida con lo que dice la voz.
+
+**Carátula**
+> Esta es la del aprendizaje 3, insight 2: cambia los números de la carátula.
 
 **Cierre**
 > Cambia el footer a "Foresight · ACH Q2 2026 · Tendencia 2 · Insight 3", agrega el logo de ACH y exporta el MP4.

@@ -12,7 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 WPS = 2.7                      # words per second
-LINE_GAP, SCENE_GAP, LEAD, TAIL = 0.35, 0.75, 0.3, 3.5
+LINE_GAP, SCENE_GAP, LEAD, TAIL = 0.35, 0.75, 3.2, 7.1   # LEAD/TAIL: silencio para las carátulas
 
 
 def main():

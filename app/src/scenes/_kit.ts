@@ -347,6 +347,8 @@ export abstract class Plate extends Scene {
   prevBg?: string;
   revealFrom: P = pt(960, 540);
   revealDur = 0.55;
+  /** Mostrar el footer en esta escena (las carátulas lo apagan). */
+  footer = true;
   override async init() {
     await loadJakarta();
     this.S = new Script(this.ctx.lyrics);
@@ -378,15 +380,15 @@ export abstract class Plate extends Scene {
     } else ov = this.draw(c, t, f);
     c.restore();
     if (SCRAP.on) paperOverlay(c);
-    drawFooter(c, f.t);
+    if (this.footer) drawFooter(c, f.t, (this.ctx.lyrics.lines[0]?.start ?? 0.9) - 0.5);
     this.ctx.comp.draw(this.ctx.renderer, this.L.upload(), out, { mode: 'replace' });
     return { bloom: 0, halation: 0, ca: 0, grain: 0, vignette: 0, hud: 0, flat: 1, ...(ov ?? {}) };
   }
 }
 
 /** Small pill bottom-left with the FOOTER parts (video.config.ts). Readable on blue and on white. */
-export function drawFooter(c: CanvasRenderingContext2D, t: number) {
-  const k = clamp((t - 0.4) / 0.5);
+export function drawFooter(c: CanvasRenderingContext2D, t: number, from = 0.4) {
+  const k = clamp((t - from) / 0.5);
   if (k <= 0 || !FOOTER.length) return;
   const size = 22, padX = 22, h = 44, x = 40, y = 1080 - 40 - h;
   c.save(); c.globalAlpha = ease.outCubic(k);
@@ -822,6 +824,133 @@ export class Cutout {
     };
     if (prev && fade < 1) drawPose(prev, 1 - fade);
     drawPose(key, fade);
+    c.restore();
+  }
+}
+
+// ------------------------------------------------------------------ PERSONAS (puppets articulados)
+/**
+ * Personas ilustradas con brazos articulados (hombro, codo, muñeca), manos con gestos y caras con
+ * expresiones. Viven en app/public/personas/<id>/ (rig.json + piezas PNG). Úsalas siempre que el video
+ * necesite una persona:
+ *   - 'valentina': joven de pelo rosado, de pie (brazos y gestos).
+ *   - 'andres':    joven rubio de camiseta azul, de pie (brazos y gestos).
+ *   - 'camila':    mujer de gafas, SENTADA en su escritorio con portátil (solo cambia la cara).
+ * Poses: neutral, saluda, senala, idea, celebra, explica, jarras, paz, piensa, encoge, rock.
+ * Caras: sonrisa, feliz, habla, sorpresa, guino, duda, enojada (camila: sonrisa, feliz, sorpresa, duda, enojada).
+ *
+ *   valentina = new Puppet('valentina');
+ *   override async load() { await this.valentina.load(); }
+ *   // setup: this.keys = [{ at: -1, pose: 'saluda', head: 'feliz' }, { at: S.word(L, 'dato').start, pose: 'senala', head: 'sorpresa' }];
+ *   // draw:  this.valentina.draw(c, 420, 980, 640, t, this.keys, { talk: [[S.line(L).start, S.line(L).end]] });
+ */
+export type PersonaId = 'valentina' | 'andres' | 'camila';
+export type Mano = 'base' | 'puno' | 'rock' | 'paz' | 'senala' | 'abierta';
+interface ArmPose { sh: number; el: number; hand?: Mano; wave?: number }
+/** Ángulos en grados desde el brazo colgando: sh = hombro (positivo = hacia afuera/arriba), el = codo (positivo = sigue hacia afuera/arriba, negativo = hacia el cuerpo). L/R = izquierda/derecha EN PANTALLA. */
+export const POSES: Record<string, { L: ArmPose; R: ArmPose }> = {
+  neutral: { L: { sh: 0, el: 0 }, R: { sh: 0, el: 0 } },
+  saluda: { L: { sh: 0, el: 0 }, R: { sh: 115, el: 35, hand: 'abierta', wave: 14 } },
+  senala: { L: { sh: 0, el: 0 }, R: { sh: 82, el: 6, hand: 'senala' } },
+  idea: { L: { sh: 0, el: 0 }, R: { sh: 28, el: 140, hand: 'senala' } },
+  celebra: { L: { sh: 145, el: 15, hand: 'puno', wave: 5 }, R: { sh: 145, el: 15, hand: 'puno', wave: 5 } },
+  explica: { L: { sh: 6, el: 0 }, R: { sh: 30, el: 80, hand: 'abierta', wave: 8 } },
+  jarras: { L: { sh: 40, el: -96 }, R: { sh: 40, el: -96 } },
+  paz: { L: { sh: 0, el: 0 }, R: { sh: 108, el: 42, hand: 'paz' } },
+  piensa: { L: { sh: 20, el: -110 }, R: { sh: 30, el: -170, hand: 'puno' } },
+  encoge: { L: { sh: 16, el: 92, hand: 'abierta' }, R: { sh: 16, el: 92, hand: 'abierta' } },
+  rock: { L: { sh: 0, el: 0 }, R: { sh: 130, el: 22, hand: 'rock', wave: 6 } },
+};
+/** Cara de reemplazo cuando una persona no tiene esa expresión. */
+const HEAD_ALIAS: Record<string, string[]> = { habla: ['feliz', 'sorpresa'], guino: ['feliz', 'sonrisa'], preocupada: ['duda', 'sorpresa'], duda: ['sorpresa'], enojada: ['duda'], sorpresa: ['habla'], feliz: ['habla', 'sonrisa'] };
+export interface PupKey { at: number; pose?: string; head?: string; flip?: boolean }
+interface RigImg { file: string; x: number; y: number; w: number; h: number }
+interface RigArm { shoulder: [number, number]; elbow: [number, number]; wrist: [number, number]; handDir: number; upper: RigImg; fore: RigImg; hand: RigImg }
+interface Rig { h: number; layers: ({ t: 'img' } & RigImg | { t: 'head' } | { t: 'arm'; side: 'L' | 'R' })[]; head: { pivot: [number, number] }; heads: Record<string, RigImg>; hands: Record<string, RigImg & { dir: number }>; arms: Record<string, RigArm> }
+const D2R = Math.PI / 180;
+
+export class Puppet {
+  rig!: Rig;
+  img = new Map<string, HTMLImageElement>();
+  constructor(public id: PersonaId) {}
+  async load() {
+    this.rig = await (await fetch(`personas/${this.id}/rig.json`)).json();
+    const r = this.rig;
+    const files = new Set<string>([...r.layers.filter((l) => l.t === 'img').map((l) => (l as RigImg).file), ...Object.values(r.heads).map((h) => h.file), ...Object.values(r.hands).map((h) => h.file)]);
+    for (const a of Object.values(r.arms)) for (const k of ['upper', 'fore', 'hand'] as const) files.add(a[k].file);
+    await Promise.all([...files].map(async (f) => { const im = await loadImage(`personas/${this.id}/${f}`); if (im) this.img.set(f, im); }));
+  }
+  private put(c: CanvasRenderingContext2D, p: RigImg) { const im = this.img.get(p.file); if (im) c.drawImage(im, p.x, p.y, p.w, p.h); }
+  private headName(want: string) {
+    if (this.rig.heads[want]) return want;
+    for (const a of HEAD_ALIAS[want] ?? []) if (this.rig.heads[a]) return a;
+    return 'sonrisa';
+  }
+  /**
+   * Dibuja a la persona con los pies en (x, feetY) y `h` px de alto, siguiendo `keys` (ordenadas por tiempo).
+   * `talk`: tramos [inicio, fin] en que habla (abre y cierra la boca). `look`: 1 mira normal, -1 voltea (igual que flip).
+   */
+  draw(c: CanvasRenderingContext2D, x: number, feetY: number, h: number, t: number, keys: PupKey[], o: { seed?: number; talk?: [number, number][]; hop?: number } = {}) {
+    if (!this.rig) return;
+    const r = this.rig, sc = h / r.h, seed = o.seed ?? 1;
+    let i = 0;
+    for (let k = 0; k < keys.length; k++) if (t >= keys[k]!.at) i = k;
+    const key = keys[i]!, prev = keys[i - 1];
+    const cur = POSES[key.pose ?? 'neutral'] ?? POSES.neutral!, old = prev ? POSES[prev.pose ?? 'neutral'] ?? POSES.neutral! : cur;
+    const dt = t - key.at;
+    const u = prev ? ease.outBack(clamp(dt / 0.42), 1.3) : 1;
+    const changed = prev && prev.pose !== key.pose;
+    const bounce = changed && dt < 0.35 ? Math.sin(clamp(dt / 0.35) * Math.PI) * (1 - dt / 0.35) : 0;
+    const breath = Math.sin(t * 2.2 + seed) * 0.007;
+    const sway = Math.sin(t * 0.9 + seed * 2) * 0.01;
+    c.save();
+    c.translate(x, feetY - (o.hop ?? 0));
+    c.fillStyle = 'rgba(0,0,0,0.10)'; c.beginPath(); c.ellipse(0, 4 + (o.hop ?? 0), h * 0.17, h * 0.02, 0, 0, Math.PI * 2); c.fill();
+    c.rotate(sway);
+    c.scale(sc * (key.flip ? -1 : 1) * (1 + bounce * 0.03), sc * (1 + breath - bounce * 0.03));
+    const hands: { m: DOMMatrix; side: 'L' | 'R'; A: RigArm; hand: Mano }[] = [];
+    for (const L of r.layers) {
+      if (L.t === 'img') this.put(c, L as RigImg);
+      else if (L.t === 'head') {
+        let hn = key.head ?? 'sonrisa';
+        if (o.talk) for (const [a0, a1] of o.talk) if (t >= a0 && t < a1 && Math.floor((t - a0) * 7 + seed) % 2 === 0) hn = 'habla';
+        const hd = r.heads[this.headName(hn)]!;
+        c.save(); c.translate(r.head.pivot[0], r.head.pivot[1]);
+        c.rotate(Math.sin(t * 1.7 + seed) * 0.025 + bounce * 0.04);
+        this.put(c, hd); c.restore();
+      } else {
+        const A = r.arms[L.side]; if (!A) continue;
+        const sg = L.side === 'L' ? 1 : -1, ph = L.side === 'L' ? 0 : 2.1;
+        const pa = old[L.side], pb = cur[L.side];
+        const lerpA = (a: number, b: number) => a + (b - a) * u;
+        const wave = (pb.wave ?? 0) * Math.sin(t * 9 + ph) * clamp(u);
+        const sh = (lerpA(pa.sh, pb.sh) + Math.sin(t * 1.6 + ph + seed) * 2) * D2R * sg;
+        const el = (lerpA(pa.el, pb.el) + wave + Math.sin(t * 1.9 + ph) * 2) * D2R * sg;
+        const hand = (u < 0.5 ? pa.hand : pb.hand) ?? 'base';
+        c.save(); c.translate(A.shoulder[0], A.shoulder[1]); c.rotate(sh);
+        // forearm (under the upper arm at the elbow)
+        c.save(); c.translate(A.elbow[0], A.elbow[1]); c.rotate(el); this.put(c, A.fore); c.restore();
+        this.put(c, A.upper);
+        // hand, last (in front)
+        c.translate(A.elbow[0], A.elbow[1]); c.rotate(el); c.translate(A.wrist[0], A.wrist[1]);
+        // the hands go on a last pass, in front of the body (so a hand on the chin or chest stays visible)
+        hands.push({ m: c.getTransform(), side: L.side, A, hand });
+        c.restore();
+      }
+    }
+    for (const hd of hands) {
+      c.save(); c.setTransform(hd.m);
+      const g = hd.hand !== 'base' ? r.hands[hd.hand] : undefined;
+      if (!g) this.put(c, hd.A.hand);
+      else {
+        // gesture hands are drawn fingers-up; turn them to follow the forearm (mirror on the left arm)
+        const m = hd.side === 'L' ? -1 : 1;
+        const gd = m === 1 ? g.dir : Math.PI - g.dir;
+        c.rotate(hd.A.handDir - gd); c.scale(m, 1);
+        this.put(c, g);
+      }
+      c.restore();
+    }
     c.restore();
   }
 }

@@ -1,19 +1,22 @@
+// 👉 AQUÍ SE REEMPLAZA ESTE CONTENIDO
+// Esta escena es del VIDEO DEMO: bórrala o cámbiala por la de tu video (y actualiza SCENES en video.config.ts).
 // ESCENA 1 — Portada (fondo papel)
 // Voz: "Este es el video demo de Futuros Vivos. Aquí te mostramos cómo convertir un insight de Foresight
 // en un video corto."
 // Un sello naranja VIDEO DEMO cae; "Futuros Vivos" aparece en un papel amarillo con cinta; el título
-// entra palabra por palabra, sincronizado con la voz, sobre dos tiras de papel. La personaje saluda y
+// entra palabra por palabra, sincronizado con la voz, sobre dos tiras de papel. Valentina (puppet) saluda y
 // luego señala el título.
 import type { Frame, PostOverrides } from '../engine/scene';
-import { C, Plate, Cutout, type CutKey, at, clamp, decor, doodle, ease, kinetic, pop, spoken, stampShake, tape, text, tornPaper, burst, type KWordT } from './_kit';
+import { C, Plate, Puppet, type PupKey, at, clamp, decor, doodle, ease, kinetic, pop, spoken, stampShake, tape, text, tornPaper, burst, type KWordT } from './_kit';
 
 export default class D1 extends Plate {
-  char = new Cutout();
-  keys: CutKey[] = [];
+  char = new Puppet('valentina');
+  keys: PupKey[] = [];
   tDemo = 0; tFV = 0; l1: KWordT[] = []; l2: KWordT[] = [];
   override async load() { await this.char.load(); }
 
   override setup() {
+    this.prevBg = C.azul; // entra con un círculo sobre la carátula
     const S = this.S, L1 = 'Este es el video demo', L2 = 'Aquí te mostramos';
     this.tDemo = S.word(L1, 'demo').start;
     this.tFV = S.word(L1, 'Futuros').start;
@@ -23,7 +26,7 @@ export default class D1 extends Plate {
     this.keys = [
       { at: -1, pose: 'saluda', head: 'feliz' },
       { at: S.word(L2, 'Aquí').start, pose: 'senala', head: 'habla' },
-      { at: S.word(L2, 'corto.').end + 0.2, pose: 'mano-pecho', head: 'sonrisa' },
+      { at: S.word(L2, 'corto.').end + 0.2, pose: 'explica', head: 'sonrisa' },
     ];
   }
 
@@ -34,7 +37,7 @@ export default class D1 extends Plate {
     c.save(); c.translate(sx, sy);
 
     // the presenter
-    at(c, 360, 960, { s: pop(t, t0 + 0.15, 0.5) }, () => this.char.draw(c, 0, 0, 600, t, this.keys, { seed: 3 }));
+    at(c, 290, 960, { s: pop(t, t0 + 0.15, 0.5) }, () => this.char.draw(c, 0, 0, 570, t, this.keys, { seed: 3 }));
 
     // "Futuros Vivos" on yellow paper
     const fk = pop(t, this.tFV - 0.05, 0.45);

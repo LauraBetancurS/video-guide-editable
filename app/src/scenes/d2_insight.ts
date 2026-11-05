@@ -1,3 +1,5 @@
+// 👉 AQUÍ SE REEMPLAZA ESTE CONTENIDO
+// Esta escena es del VIDEO DEMO: bórrala o cámbiala por la de tu video (y actualiza SCENES en video.config.ts).
 // ESCENA 2 — El insight (fondo azul)
 // Voz: "Todo empieza con un insight del informe. Una idea clara, con evidencia, y un dato que haga pensar."
 // Una página del informe de Foresight (papel rasgado) con líneas de texto; un marcador amarillo resalta

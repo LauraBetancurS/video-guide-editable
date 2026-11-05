@@ -81,15 +81,35 @@ Para un personaje ilustrado, o imágenes en general, carga los archivos en `over
 ### Íconos de línea (`icon.*`)
 `check` · `person` · `car` · `roadClosed` · `bill` · `wallet` · `scale` · `brokenLock` · `phone` · `pin` · `group` · `clock` · `bubble` · `magnifier` · `refresh`.
 
-### Personajes
-- **`Cutout` (ilustrado, recomendado):** el kit de `app/public/personaje/` tiene 6 poses y 8 expresiones. Las expresiones son `sonrisa`, `feliz`, `habla`, `sorpresa`, `duda`, `preocupada`, `enojada` y `mascarilla`. Las poses son `neutral`, `saluda`, `idea`, `mano-pecho`, `senala` y `paz`. Le das una lista de claves `{ at, pose, head }` y cambia en esos momentos; además respira, se balancea y rebota al cambiar de pose.
-  ```ts
-  char = new Cutout();
-  override async load() { await this.char.load(); }
-  // setup: this.keys = [{ at: -1, pose: 'neutral', head: 'sonrisa' }, { at: this.tDato, pose: 'idea', head: 'sorpresa' }];
-  // draw:  this.char.draw(c, 400, 960, 560, t, this.keys);
-  ```
-- **`person(c, x, pies, alto, t, {mood, shirt, style, armL, armR, …})` (dibujado):** personaje plano con expresiones (`smile`, `happy`, `worry`, `surprised`, `talk`, `think`) y estilo de pelo corto o largo (`style: 'long'`).
+### Personas (puppets) — úsalas SIEMPRE que el video necesite una persona
+`Puppet` dibuja personas ilustradas con **brazos articulados** (hombro, codo y muñeca), **manos con gestos** y **caras con expresiones**. Respiran, se balancean y cambian de pose con un rebote suave. Viven en `app/public/personas/<id>/`.
+
+| Id | Quién | Qué puede hacer |
+|---|---|---|
+| `valentina` | Joven de pelo rosado, camiseta verde, de pie | Todas las poses y caras |
+| `andres` | Joven rubio, camiseta azul, de pie | Todas las poses y caras |
+| `camila` | Mujer de gafas, **sentada en su escritorio** con portátil | Solo cambia la cara (ideal para "alguien trabajando") |
+
+- **Poses:** `neutral`, `saluda` (agita la mano), `senala` (señala a la derecha; con `flip: true` a la izquierda), `idea` (índice arriba), `celebra` (puños arriba), `explica` (mano abierta), `jarras` (manos en la cintura), `paz`, `piensa` (puño en el mentón), `encoge` (no sé), `rock`.
+- **Caras:** `sonrisa`, `feliz`, `habla`, `sorpresa`, `guino`, `duda`, `enojada`.
+- **Que hable:** pasa `talk` con los tramos en que la persona habla, y abre y cierra la boca.
+
+```ts
+vale = new Puppet('valentina');
+override async load() { await this.vale.load(); }
+// setup:
+this.keys = [
+  { at: -1, pose: 'saluda', head: 'feliz' },
+  { at: S.word('un dato que haga pensar', 'dato').start, pose: 'senala', head: 'sorpresa' },
+];
+// draw: pies en (420, 980), 640 px de alto
+this.vale.draw(c, 420, 980, 640, t, this.keys, { talk: [[S.line('Todo empieza').start, S.line('Todo empieza').end]] });
+```
+
+Las poses están en `POSES` (`_kit.ts`): son ángulos de hombro y codo, así que se pueden crear nuevas.
+Para agregar otra persona (un kit de Freepik con piezas separadas), mira `analysis/personas/LEEME.md`.
+
+**Otros (solo si se piden):** `Cutout` (el kit ilustrado anterior, en `app/public/personaje/`) y `person(…)` (personaje plano dibujado con código).
 
 ### Efectos
 `glow` (resplandor) · `burst` (destello de rayos) · `ripple` (onda) · `stampShake` (sacudón de sello) · `decor` (garabatos de fondo) · `strokeTrim` (línea que se dibuja; en scrapbook parece marcador).
@@ -100,6 +120,10 @@ La textura de papel se aplica sola a todo el cuadro cuando `STYLE = 'scrapbook'`
 
 ### Logos
 `loadLogos()` en `load()` y `drawLogos(c, imgs, cx, cy, alpha)` en el cierre. Los archivos se configuran en `LOGOS`.
+
+## Carátulas (automáticas)
+
+Todos los videos empiezan y terminan con la carátula **Aprendizaje X · Insight Z** (`caratula_inicio.ts` y `caratula_final.ts`). `timeline.ts` las agrega sola, en el silencio que pone `preparar_voz.py`. **No van en `SCENES`.** Para cambiar los números, edita `CARATULA` en `video.config.ts`.
 
 ## Buenas prácticas
 
