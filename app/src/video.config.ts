@@ -9,10 +9,10 @@
  * Solo cambia los números: quedan como "Aprendizaje 3" e "Insight 2".
  */
 export const CARATULA = {
-  aprendizaje: 'X',
-  insight: 'Z',
+  aprendizaje: '5',
+  insight: '2',
   /** Título del video (debajo de los números). */
-  titulo: 'Cómo hacer videos de insights',
+  titulo: 'De autenticar a gobernar la delegación',
   /** Línea pequeña de arriba: cliente y trimestre, o el proyecto. */
   cliente: 'Futuros Vivos',
 };

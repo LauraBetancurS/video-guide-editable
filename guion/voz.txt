@@ -1,33 +1,31 @@
 # 👉 AQUÍ SE REEMPLAZA ESTE CONTENIDO
-# Borra el texto del demo (desde "## portada") y pon el de tu video.
+# Video: Aprendizaje 5 · Insight 2 — La confianza evoluciona desde autenticar hacia gobernar la delegación
 #
 # Este archivo es la fuente de verdad del texto hablado.
 # - Una frase por línea, escrita EXACTAMENTE como la dice la voz.
 # - "## nombre" empieza una escena nueva (sirve para los tiempos provisionales y para leerlo fácil).
 # - Las líneas que empiezan con "#" y las vacías se ignoran; las etiquetas <break .../> también.
 
-## portada
-Este es el video demo de Futuros Vivos.
-Aquí te mostramos cómo convertir un insight de Foresight en un video corto.
+## gancho
+Imagina que le pides a un asistente de IA que te compre unos tiquetes.
+Sabes que es tu agente.
+Pero, ¿sabes hasta dónde puede gastar, con qué tarjeta y si debía preguntarte antes?
 
-## insight
-Todo empieza con un insight del informe.
-Una idea clara, con evidencia, y un dato que haga pensar.
+## problema
+Identificar a un agente ya no es suficiente.
+Según Experian, en 2026 el fraude a través de agentes de IA es el riesgo número uno.
+Los deepfakes son el número dos.
+Y grandes comercios como Amazon ya están bloqueando a los agentes de terceros.
 
-## guion
-Primero, escribe el guion en una tabla: tiempo, voz en off, texto en pantalla y lo que se ve.
+## cambio
+El reto pasa de autenticar a gobernar la delegación.
+Eso quiere decir definir qué puede hacer el agente: hasta qué monto, en qué comercios, en qué horarios y cuándo debe escalarle la decisión a la persona.
+Y cada acción tiene que quedar registrada: qué pidió el usuario, qué interpretó el agente y qué ejecutó al final.
 
-## voz
-Después, genera la voz en ElevenLabs y guárdala en la carpeta de audio.
-El sistema encuentra el momento exacto de cada palabra.
-
-## escenas
-Luego, con Claude, describe cada escena con tus palabras.
-Claude la programa: textos, íconos, personajes y animaciones, sincronizados con la voz.
-
-## exportar
-Revisa el resultado en el navegador, pide ajustes, y exporta el video con un solo comando.
+## implicacion
+Para bancos y comercios hay dos extremos que evitar: bloquear toda la automatización o permitirla sin control.
+Lo que se necesita son permisos granulares según el nivel de riesgo, y no listas binarias de "humano o bot".
 
 ## cierre
-Del informe a un video, en una tarde.
-Futuros Vivos, por InnLab.
+El agente confiable no será el que demuestre su identidad una sola vez.
+Será el que pueda probar, en cada acción, que actúa con un mandato vigente, limitado y revocable.

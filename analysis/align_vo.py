@@ -45,6 +45,9 @@ SPOKEN = {
     "MP4": ["EME", "PE", "CUATRO"],
     "ElevenLabs": ["ELEVEN", "LABS"],
     "%": ["POR", "CIENTO"],
+    "IA": ["I", "A"],
+    "2026": ["DOS", "MIL", "VEINTISEIS"],
+    "deepfakes": ["DIP", "FEIKS"],
 }
 
 
