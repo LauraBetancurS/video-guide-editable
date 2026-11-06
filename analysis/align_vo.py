@@ -48,6 +48,8 @@ SPOKEN = {
     "IA": ["I", "A"],
     "2026": ["DOS", "MIL", "VEINTISEIS"],
     "deepfakes": ["DIP", "FEIKS"],
+    "BIS": ["BIS"],
+    "Bre-B": ["BRE", "BE"],
 }
 
 

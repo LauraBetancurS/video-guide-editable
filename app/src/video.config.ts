@@ -9,17 +9,17 @@
  * Solo cambia los números: quedan como "Aprendizaje 3" e "Insight 2".
  */
 export const CARATULA = {
-  aprendizaje: '5',
-  insight: '2',
+  aprendizaje: '6',
+  insight: '1',
   /** Título del video (debajo de los números). */
-  titulo: 'De autenticar a gobernar la delegación',
+  titulo: 'Los datos de pago ya generan ROI crediticio',
   /** Línea pequeña de arriba: cliente y trimestre, o el proyecto. */
-  cliente: 'Futuros Vivos',
+  cliente: 'ACH Colombia · Q2 2026',
 };
 
 // 👉 AQUÍ SE REEMPLAZA ESTE CONTENIDO → cliente, trimestre, tendencia/aprendizaje e insight.
 /** Footer de identificación (pastilla abajo a la izquierda en todas las escenas). [] para ocultarlo. */
-export const FOOTER: string[] = ['Foresight', 'Futuros Vivos', 'Aprendizaje 5 · Insight 2'];
+export const FOOTER: string[] = ['Foresight', 'ACH Colombia · Q2 2026', 'Aprendizaje 6 · Insight 1'];
 
 /** Estilo: 'scrapbook' (papel, cinta, marcador) o 'limpio' (flat, colores exactos de la marca). */
 export const STYLE: 'scrapbook' | 'limpio' = 'scrapbook';
@@ -38,12 +38,11 @@ export const LOGOS: { file: string; height: number }[] = [
  * el corte se hace justo antes de que la voz la diga (la primera escena no lo necesita).
  */
 export const SCENES: { file: string; from?: string }[] = [
-  { file: 'a1_gancho' },
-  { file: 'a2_riesgos', from: 'Identificar a un agente' },
-  { file: 'a3_amazon', from: 'grandes comercios como Amazon' },
-  { file: 'a4_giro', from: 'El reto pasa' },
-  { file: 'a5_reglas', from: 'Eso quiere decir' },
-  { file: 'a6_registro', from: 'cada acción tiene que quedar' },
-  { file: 'a7_implicacion', from: 'Para bancos y comercios' },
-  { file: 'a8_cierre', from: 'El agente confiable' },
+  { file: 'r1_gancho' },
+  { file: 'r2_pasado_presente', from: 'El buró mira' },
+  { file: 'r3_dato', from: 'Un estudio del BIS' },
+  { file: 'r4_monitoreo', from: 'Y el valor sigue' },
+  { file: 'r5_riesgo', from: 'Pero hay un riesgo' },
+  { file: 'r6_colombia', from: 'En Colombia' },
+  { file: 'r7_cierre', from: 'La pregunta es' },
 ];
