@@ -9,17 +9,18 @@
  * Solo cambia los números: quedan como "Aprendizaje 3" e "Insight 2".
  */
 export const CARATULA = {
-  aprendizaje: '5',
-  insight: '2',
+  aprendizaje: '6',
+  /** Número del insight. Déjalo vacío ('') en el video general del aprendizaje: la tira amarilla dice "General". */
+  insight: '',
   /** Título del video (debajo de los números). */
-  titulo: 'De autenticar a gobernar la delegación',
+  titulo: 'Los datos financieros salen del perímetro financiero',
   /** Línea pequeña de arriba: cliente y trimestre, o el proyecto. */
-  cliente: 'Futuros Vivos',
+  cliente: 'ACH Colombia · Q2 2026',
 };
 
 // 👉 AQUÍ SE REEMPLAZA ESTE CONTENIDO → cliente, trimestre, tendencia/aprendizaje e insight.
 /** Footer de identificación (pastilla abajo a la izquierda en todas las escenas). [] para ocultarlo. */
-export const FOOTER: string[] = ['Foresight', 'Futuros Vivos', 'Aprendizaje 5 · Insight 2'];
+export const FOOTER: string[] = ['Foresight', 'ACH Colombia · Q2 2026', 'Aprendizaje 6 · General'];
 
 /** Estilo: 'scrapbook' (papel, cinta, marcador) o 'limpio' (flat, colores exactos de la marca). */
 export const STYLE: 'scrapbook' | 'limpio' = 'scrapbook';
@@ -38,12 +39,10 @@ export const LOGOS: { file: string; height: number }[] = [
  * el corte se hace justo antes de que la voz la diga (la primera escena no lo necesita).
  */
 export const SCENES: { file: string; from?: string }[] = [
-  { file: 'a1_gancho' },
-  { file: 'a2_riesgos', from: 'Identificar a un agente' },
-  { file: 'a3_amazon', from: 'grandes comercios como Amazon' },
-  { file: 'a4_giro', from: 'El reto pasa' },
-  { file: 'a5_reglas', from: 'Eso quiere decir' },
-  { file: 'a6_registro', from: 'cada acción tiene que quedar' },
-  { file: 'a7_implicacion', from: 'Para bancos y comercios' },
-  { file: 'a8_cierre', from: 'El agente confiable' },
+  { file: 'g1_gancho' },
+  { file: 'g2_perimetro', from: 'Eso es parte de algo' },
+  { file: 'g3_dato', from: 'Y no pasa solo' },
+  { file: 'g4_doble_filo', from: 'El dato transaccional' },
+  { file: 'g5_insights', from: 'Los tres insights' },
+  { file: 'g6_cierre', from: 'La pregunta para ACH' },
 ];

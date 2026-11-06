@@ -27,7 +27,7 @@ export function caratula(c: CanvasRenderingContext2D, t: number, t0: number, onB
   });
 
   // "Insight Z"
-  const b = `Insight ${CARATULA.insight}`;
+  const b = CARATULA.insight ? `Insight ${CARATULA.insight}` : 'General'; // video general del aprendizaje: sin número de insight
   const bW = measureText(c, b, 800, 104) + 150;
   at(c, 1010, 628 + float(t, 2, 5, 1.2), { s: pop(t, t0 + 0.6), r: 0.028 }, () => {
     tornPaper(c, bW, 164, C.amarillo, 5, { tear: 9 });

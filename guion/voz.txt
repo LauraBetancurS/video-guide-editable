@@ -1,5 +1,5 @@
 # 👉 AQUÍ SE REEMPLAZA ESTE CONTENIDO
-# Video: Aprendizaje 5 · Insight 2 — La confianza evoluciona desde autenticar hacia gobernar la delegación
+# Video: Aprendizaje 6 · General — Los datos financieros salen del perímetro financiero
 #
 # Este archivo es la fuente de verdad del texto hablado.
 # - Una frase por línea, escrita EXACTAMENTE como la dice la voz.
@@ -7,25 +7,23 @@
 # - Las líneas que empiezan con "#" y las vacías se ignoran; las etiquetas <break .../> también.
 
 ## gancho
-Imagina que le pides a un asistente de IA que te compre unos tiquetes.
-Sabes que es tu agente.
-Pero, ¿sabes hasta dónde puede gastar, con qué tarjeta y si debía preguntarte antes?
+¿Alguna vez, para arrendar un apartamento, te pidieron tus extractos bancarios?
 
-## problema
-Identificar a un agente ya no es suficiente.
-Según Experian, en 2026 el fraude a través de agentes de IA es el riesgo número uno.
-Los deepfakes son el número dos.
-Y grandes comercios como Amazon ya están bloqueando a los agentes de terceros.
+## perimetro
+Eso es parte de algo más grande: los datos financieros están saliendo del banco.
+Pagos, ingresos y hábitos de consumo ya sirven para verificar quién eres en vivienda, seguros, comercio y plataformas.
 
-## cambio
-El reto pasa de autenticar a gobernar la delegación.
-Eso quiere decir definir qué puede hacer el agente: hasta qué monto, en qué comercios, en qué horarios y cuándo debe escalarle la decisión a la persona.
-Y cada acción tiene que quedar registrada: qué pidió el usuario, qué interpretó el agente y qué ejecutó al final.
+## dato
+Y no pasa solo en Colombia.
+Según el BIS, para 2024 ya había noventa y cinco jurisdicciones con algún marco de Open Banking u Open Finance.
 
-## implicacion
-Para bancos y comercios hay dos extremos que evitar: bloquear toda la automatización o permitirla sin control.
-Lo que se necesita son permisos granulares según el nivel de riesgo, y no listas binarias de "humano o bot".
+## doble filo
+El dato transaccional se convierte en reputación, en infraestructura y en poder económico.
+Si se usa bien, amplía el acceso para quien no tiene historial en el buró.
+Si se usa mal, la portabilidad se vuelve vigilancia o exclusión automática.
+
+## insights
+Los tres insights de este aprendizaje lo muestran: los pagos ya generan retorno crediticio, la aversión al riesgo frena a la gente a compartir sus datos y los nuevos actores le están ganando terreno a los bancos.
 
 ## cierre
-El agente confiable no será el que demuestre su identidad una sola vez.
-Será el que pueda probar, en cada acción, que actúa con un mandato vigente, limitado y revocable.
+La pregunta para ACH es: ¿quién va a orquestar esa confianza entre industrias?
