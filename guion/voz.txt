@@ -1,31 +1,40 @@
 # 👉 AQUÍ SE REEMPLAZA ESTE CONTENIDO
-# Video: Aprendizaje 5 · Insight 2 — La confianza evoluciona desde autenticar hacia gobernar la delegación
+# Video: Escenario 1 — La red cooperativa convierte datos en acceso y confianza (Radar de Tendencias Globales 2026)
 #
 # Este archivo es la fuente de verdad del texto hablado.
 # - Una frase por línea, escrita EXACTAMENTE como la dice la voz.
 # - "## nombre" empieza una escena nueva (sirve para los tiempos provisionales y para leerlo fácil).
 # - Las líneas que empiezan con "#" y las vacías se ignoran; las etiquetas <break .../> también.
 
-## gancho
-Imagina que le pides a un asistente de IA que te compre unos tiquetes.
-Sabes que es tu agente.
-Pero, ¿sabes hasta dónde puede gastar, con qué tarjeta y si debía preguntarte antes?
-
 ## problema
-Identificar a un agente ya no es suficiente.
-Según Experian, en 2026 el fraude a través de agentes de IA es el riesgo número uno.
-Los deepfakes son el número dos.
-Y grandes comercios como Amazon ya están bloqueando a los agentes de terceros.
+Producir deja cada vez menos.
+El productor no tiene capital, el banco no tiene datos y el comprador no tiene cómo verificar lo que compra.
+Nadie puede resolverlo solo.
 
-## cambio
-El reto pasa de autenticar a gobernar la delegación.
-Eso quiere decir definir qué puede hacer el agente: hasta qué monto, en qué comercios, en qué horarios y cuándo debe escalarle la decisión a la persona.
-Y cada acción tiene que quedar registrada: qué pidió el usuario, qué interpretó el agente y qué ejecutó al final.
+## titulo
+Este es el primer escenario de nuestro radar: la red cooperativa convierte datos en acceso y confianza.
 
-## implicacion
-Para bancos y comercios hay dos extremos que evitar: bloquear toda la automatización o permitirla sin control.
-Lo que se necesita son permisos granulares según el nivel de riesgo, y no listas binarias de "humano o bot".
+## encuentro
+Las cooperativas se vuelven el punto de encuentro.
+Junto con la banca de desarrollo, los compradores y los supervisores, pactan reglas comunes: los datos se gobiernan en conjunto y cada productor puede llevarse su historial.
+
+## linea
+Primero llegan los pilotos de sensores y crédito por uso.
+Después, las disputas por quién es dueño de los datos.
+Y en 2030, el pacto: contratos portables y seguros por si algo falla.
+
+## rosa
+En 2031, Rosa, caficultora y socia de una cooperativa, recibe una oferta de crédito: la cuota baja si cumple un indicador auditado.
+Antes de aceptar, decide qué datos compartir con el banco.
+
+## historial
+Si mañana cambia de cooperativa, se lleva su historial.
+Nada de esto es espectacular: lo importante es que cada paso se explica y se puede reclamar.
+
+## senales
+¿Cómo saber si este futuro se acerca?
+Más sensores y crédito por uso en las cooperativas, disputas por los datos y contratos portables.
+Y una alerta: que crezcan los usuarios, pero sea más difícil irse con tus datos.
 
 ## cierre
-El agente confiable no será el que demuestre su identidad una sola vez.
-Será el que pueda probar, en cada acción, que actúa con un mandato vigente, limitado y revocable.
+Si mañana se cayera la conexión o se retirara el financiador, ¿qué acuerdos sobrevivirían?
