@@ -6,20 +6,21 @@
 // 👉 AQUÍ SE REEMPLAZA ESTE CONTENIDO → los números del aprendizaje y del insight, y el título.
 /**
  * CARÁTULA de inicio y de cierre (salen solas en todos los videos).
- * Solo cambia los números: quedan como "Aprendizaje 3" e "Insight 2".
+ * Un número queda como "Aprendizaje 3"; un rango ("1 al 8") como "Aprendizajes 1 al 8".
+ * Insight vacío ('') queda como "Panorama general" (para videos generales del informe).
  */
 export const CARATULA = {
-  aprendizaje: '5',
-  insight: '2',
+  aprendizaje: '1 al 8',
+  insight: '',
   /** Título del video (debajo de los números). */
-  titulo: 'De autenticar a gobernar la delegación',
+  titulo: 'Así exploramos el futuro del campo, el dinero y los negocios',
   /** Línea pequeña de arriba: cliente y trimestre, o el proyecto. */
-  cliente: 'Futuros Vivos',
+  cliente: 'Fintech · Agrotech · Modelos de negocio',
 };
 
 // 👉 AQUÍ SE REEMPLAZA ESTE CONTENIDO → cliente, trimestre, tendencia/aprendizaje e insight.
 /** Footer de identificación (pastilla abajo a la izquierda en todas las escenas). [] para ocultarlo. */
-export const FOOTER: string[] = ['Foresight', 'Futuros Vivos', 'Aprendizaje 5 · Insight 2'];
+export const FOOTER: string[] = ['Foresight', 'Futuros Vivos', 'Panorama general'];
 
 /** Estilo: 'scrapbook' (papel, cinta, marcador) o 'limpio' (flat, colores exactos de la marca). */
 export const STYLE: 'scrapbook' | 'limpio' = 'scrapbook';
@@ -38,12 +39,12 @@ export const LOGOS: { file: string; height: number }[] = [
  * el corte se hace justo antes de que la voz la diga (la primera escena no lo necesita).
  */
 export const SCENES: { file: string; from?: string }[] = [
-  { file: 'a1_gancho' },
-  { file: 'a2_riesgos', from: 'Identificar a un agente' },
-  { file: 'a3_amazon', from: 'grandes comercios como Amazon' },
-  { file: 'a4_giro', from: 'El reto pasa' },
-  { file: 'a5_reglas', from: 'Eso quiere decir' },
-  { file: 'a6_registro', from: 'cada acción tiene que quedar' },
-  { file: 'a7_implicacion', from: 'Para bancos y comercios' },
-  { file: 'a8_cierre', from: 'El agente confiable' },
+  { file: 'p1_gancho' },
+  { file: 'p2_foresight', from: 'Por eso, en InnLab' },
+  { file: 'p3_senales', from: 'Rastreamos señales' },
+  { file: 'p4_aprendizajes', from: 'De esas señales salieron' },
+  { file: 'p5_futuros', from: 'Con esos aprendizajes' },
+  { file: 'p6_ensayos', from: 'No son predicciones' },
+  { file: 'p7_acuerdos', from: 'Porque la tecnología' },
+  { file: 'p8_cierre', from: 'Entra al mapa' },
 ];

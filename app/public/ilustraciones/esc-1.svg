@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+<rect width="600" height="400" fill="#DFF3E6"/>
+<circle cx="470" cy="92" r="46" fill="#E4EB60"/>
+<path d="M0 230 C120 180 230 200 330 230 S 520 190 600 210 V400 H0Z" fill="#8FD3A9"/>
+<path d="M0 280 C140 240 260 270 380 285 S 540 260 600 270 V400 H0Z" fill="#4CB979"/>
+<path d="M0 330 C160 305 300 330 600 315 V400 H0Z" fill="#23804B"/>
+<g stroke="#23804B" stroke-width="5" stroke-linecap="round" opacity=".55"><path d="M40 300 L120 292"/><path d="M60 318 L170 306"/><path d="M420 300 L560 292"/><path d="M440 318 L585 309"/></g>
+<g fill="#FFFFFF" stroke="#1E1B3A" stroke-width="4" stroke-linejoin="round">
+<path d="M90 240 h56 v40 h-56z"/><path d="M84 242 l34 -28 34 28z" fill="#E9683B"/>
+<path d="M270 205 h70 v50 h-70z"/><path d="M262 208 l43 -34 43 34z" fill="#E9683B"/>
+<path d="M460 238 h56 v40 h-56z"/><path d="M454 240 l34 -28 34 28z" fill="#E9683B"/>
+</g>
+<g stroke="#5454E9" stroke-width="4" stroke-dasharray="2 10" stroke-linecap="round" fill="none"><path d="M118 210 Q200 120 305 165"/><path d="M305 165 Q400 120 488 208"/><path d="M118 210 Q300 330 488 208"/></g>
+<g fill="#5454E9" stroke="#fff" stroke-width="4"><circle cx="118" cy="205" r="12"/><circle cx="305" cy="162" r="14"/><circle cx="488" cy="205" r="12"/></g>
+<g transform="translate(250 60)"><rect width="110" height="44" rx="22" fill="#fff" stroke="#1E1B3A" stroke-width="3"/><text x="55" y="29" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="18" text-anchor="middle" fill="#23804B">co-op</text></g>
+</svg>

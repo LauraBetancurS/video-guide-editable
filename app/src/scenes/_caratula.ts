@@ -18,7 +18,8 @@ export function caratula(c: CanvasRenderingContext2D, t: number, t0: number, onB
   });
 
   // "Aprendizaje X"
-  const a = `Aprendizaje ${CARATULA.aprendizaje}`;
+  // un número → "Aprendizaje 3"; un rango ("1 al 8") → "Aprendizajes 1 al 8"
+  const a = /^\d+$/.test(CARATULA.aprendizaje.trim()) ? `Aprendizaje ${CARATULA.aprendizaje}` : `Aprendizajes ${CARATULA.aprendizaje}`;
   const aW = measureText(c, a, 800, 104) + 150;
   at(c, 930, 430 + float(t, 0, 5, 1.1), { s: pop(t, t0 + 0.3), r: -0.035 }, () => {
     tornPaper(c, aW, 164, onBlue ? C.blanco : C.azul, 3, { tear: 9 });
@@ -27,7 +28,8 @@ export function caratula(c: CanvasRenderingContext2D, t: number, t0: number, onB
   });
 
   // "Insight Z"
-  const b = `Insight ${CARATULA.insight}`;
+  // sin número de insight (video general) → "Panorama general"
+  const b = CARATULA.insight ? `Insight ${CARATULA.insight}` : 'Panorama general';
   const bW = measureText(c, b, 800, 104) + 150;
   at(c, 1010, 628 + float(t, 2, 5, 1.2), { s: pop(t, t0 + 0.6), r: 0.028 }, () => {
     tornPaper(c, bW, 164, C.amarillo, 5, { tear: 9 });
