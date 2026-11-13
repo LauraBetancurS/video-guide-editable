@@ -56,7 +56,9 @@ export default class P8 extends Plate {
       at(c, PX + PW - 180, PY + 60, { a: tk, r: -0.04 }, () => { c.fillStyle = C.amarillo; c.fillRect(-100, -24, 200, 48); text(c, 'Futuros Vivos', 0, 9, { w: 800, size: 24, col: C.azul, align: 'center' }); });
       // los 4 futuros
       const zoom = ease.inOutCubic(clamp((t - this.tVive) / 0.6));
-      FUTUROS.forEach((f, i) => {
+      // el elegido (1) se dibuja de último, para que al crecer quede encima de los demás
+      [0, 2, 3, 1].forEach((i) => {
+        const f = FUTUROS[i]!;
         const cw = 240, ch = 200;
         const cx = PX + 150 + i * 280, cy = PY + 380;
         const sel = i === 1;
