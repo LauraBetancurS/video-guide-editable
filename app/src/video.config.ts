@@ -13,14 +13,14 @@ export const CARATULA = {
   aprendizaje: '1 al 8',
   insight: '',
   /** Título del video (debajo de los números). */
-  titulo: 'Así exploramos el futuro del campo, el dinero y los negocios',
+  titulo: 'De señales a futuros posibles',
   /** Línea pequeña de arriba: cliente y trimestre, o el proyecto. */
   cliente: 'Fintech · Agrotech · Modelos de negocio',
 };
 
 // 👉 AQUÍ SE REEMPLAZA ESTE CONTENIDO → cliente, trimestre, tendencia/aprendizaje e insight.
 /** Footer de identificación (pastilla abajo a la izquierda en todas las escenas). [] para ocultarlo. */
-export const FOOTER: string[] = ['FORESIGHT', 'Futuros Vivos', 'Panorama general'];
+export const FOOTER: string[] = ['FORESIGHT', 'Futuros Vivos', 'De señales a futuros posibles'];
 
 /** Estilo: 'scrapbook' (papel, cinta, marcador) o 'limpio' (flat, colores exactos de la marca). */
 export const STYLE: 'scrapbook' | 'limpio' = 'scrapbook';
