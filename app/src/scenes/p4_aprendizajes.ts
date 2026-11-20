@@ -1,9 +1,9 @@
 // 👉 AQUÍ SE REEMPLAZA ESTE CONTENIDO
 // ESCENA 4 — Ocho aprendizajes (fondo azul)
 // Voz: "De esas señales salieron ocho aprendizajes. Cada uno muestra un cambio: cómo funcionan las cosas hoy
-// y cómo podrían funcionar mañana. Por ejemplo, sistemas que se conectan entre sí, decisiones tomadas con
-// datos o dinero digital con garantías."
-// Cae la tira "8 aprendizajes" y llegan 8 tarjetas de papel con sus íconos. Abajo, la barra "Hoy → Mañana"
+// y hacia dónde se están moviendo. Por ejemplo: conectarse es la nueva puerta de entrada, la tecnología decide
+// pero alguien tiene que responder, y el dinero digital necesita confianza antes que rapidez."
+// Cae la tira "8 aprendizajes" y llegan 8 tarjetas de papel con sus íconos. Abajo, la barra "Hoy → Hacia dónde se mueve"
 // se llena entre "hoy" y "mañana". En cada ejemplo se levanta su tarjeta (1, 2 y 7) y las demás se apagan.
 import type { Frame, PostOverrides } from '../engine/scene';
 import { C, Plate, at, burst, clamp, decor, ease, fit, float, hexA, inn, measureText, pop, rrect, text, tornPaper } from './_kit';
@@ -18,11 +18,11 @@ export default class P4 extends Plate {
     this.tApr = S.word('De esas señales salieron', 'aprendizajes').start;
     this.tCambio = S.word('Cada uno muestra', 'cambio').start;
     this.tHoy = S.word('Cada uno muestra', 'hoy').start;
-    this.tMan = S.word('Cada uno muestra', 'mañana').start;
-    this.tEj = S.word('Por ejemplo, sistemas', 'ejemplo').start;
-    this.tSis = S.word('Por ejemplo, sistemas', 'sistemas').start;
-    this.tDat = S.word('Por ejemplo, sistemas', 'datos').start;
-    this.tDin = S.word('Por ejemplo, sistemas', 'dinero').start;
+    this.tMan = S.word('Cada uno muestra', 'moviendo').start;
+    this.tEj = S.word('Por ejemplo: conectarse', 'ejemplo').start;
+    this.tSis = S.word('Por ejemplo: conectarse', 'conectarse').start;
+    this.tDat = S.word('Por ejemplo: conectarse', 'tecnología').start;
+    this.tDin = S.word('Por ejemplo: conectarse', 'dinero').start;
   }
 
   draw(c: CanvasRenderingContext2D, t: number, _f: Frame): PostOverrides {
@@ -68,7 +68,7 @@ export default class P4 extends Plate {
         c.beginPath(); c.arc(0, 0, 24, 0, Math.PI * 2); c.fillStyle = C.amarillo; c.fill(); c.lineWidth = 6; c.strokeStyle = C.blanco; c.stroke();
       });
       text(c, 'Hoy', x0 - 40, y + 14, { w: 800, size: 40, col: hexA(C.blanco, 0.6 + 0.4 * pop(t, this.tHoy, 0.3)), align: 'right' });
-      text(c, 'Mañana', x1 + 40, y + 14, { w: 800, size: 40, col: hexA(C.blanco, 0.6 + 0.4 * pop(t, this.tMan, 0.3)) });
+      text(c, 'Hacia dónde se mueve', x1 + 40, y + 14, { w: 800, size: 40, col: hexA(C.blanco, 0.6 + 0.4 * pop(t, this.tMan, 0.3)) });
       c.restore();
     }
     return {};

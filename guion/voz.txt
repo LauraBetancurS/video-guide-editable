@@ -19,11 +19,11 @@ Rastreamos señales de cambio en tres mundos que se están cruzando: Fintech, Ag
 
 ## aprendizajes
 De esas señales salieron ocho aprendizajes.
-Cada uno muestra un cambio: cómo funcionan las cosas hoy y cómo podrían funcionar mañana.
-Por ejemplo, sistemas que se conectan entre sí, decisiones tomadas con datos o dinero digital con garantías.
+Cada uno muestra un cambio: cómo funcionan las cosas hoy y hacia dónde se están moviendo.
+Por ejemplo: conectarse es la nueva puerta de entrada, la tecnología decide pero alguien tiene que responder, y el dinero digital necesita confianza antes que rapidez.
 
 ## futuros
-Con esos aprendizajes construimos cuatro posibles futuros hacia 2031: cooperativas que negocian juntas, plataformas cómodas pero difíciles de dejar, dinero digital con reglas claras, y máquinas que llegan, pero no a todos igual.
+Con esos aprendizajes construimos cuatro posibles futuros hacia 2031: una red de cooperativas que convierte los datos en acceso y confianza, el peaje invisible de las plataformas que controlan el campo, el dinero digital con reglas claras, y una automatización desigual que obliga a un nuevo acuerdo.
 
 ## ensayos
 No son predicciones.

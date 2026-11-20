@@ -1,8 +1,8 @@
 // 👉 AQUÍ SE REEMPLAZA ESTE CONTENIDO
 // ESCENA 5 — Cuatro posibles futuros (fondo papel)
-// Voz: "Con esos aprendizajes construimos cuatro posibles futuros hacia 2031: cooperativas que negocian juntas,
-// plataformas cómodas pero difíciles de dejar, dinero digital con reglas claras, y máquinas que llegan,
-// pero no a todos igual."
+// Voz: "Con esos aprendizajes construimos cuatro posibles futuros hacia 2031: una red de cooperativas que
+// convierte los datos en acceso y confianza, el peaje invisible de las plataformas que controlan el campo,
+// el dinero digital con reglas claras, y una automatización desigual que obliga a un nuevo acuerdo."
 // Arriba: "4 posibles futuros" y la pastilla "2031". Cada futuro llega como polaroid con su ilustración,
 // pegada con cinta, cuando la voz lo nombra (verde, naranja, azul, morado: los colores de la página).
 import type { Frame, PostOverrides } from '../engine/scene';
@@ -18,7 +18,7 @@ export default class P5 extends Plate {
     this.prevBg = C.azul;
     this.tCuatro = S.word(L, 'cuatro').start;
     this.t2031 = S.word(L, 'hacia').start;
-    this.ts = [S.word(L, 'cooperativas').start, S.word(L, 'plataformas').start, S.word(L, 'dinero').start, S.word(L, 'máquinas').start];
+    this.ts = [S.word(L, 'red').start, S.word(L, 'peaje').start, S.word(L, 'dinero').start, S.word(L, 'automatización').start];
   }
 
   draw(c: CanvasRenderingContext2D, t: number, _f: Frame): PostOverrides {
