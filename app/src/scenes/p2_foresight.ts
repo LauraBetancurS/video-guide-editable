@@ -1,8 +1,9 @@
 // 👉 AQUÍ SE REEMPLAZA ESTE CONTENIDO
 // ESCENA 2 — Foresight (fondo azul)
-// Voz: "Por eso, en InnLab, exploramos el futuro antes de que llegue. Eso es foresight."
-// "En InnLab" en una pastilla; "Exploramos el futuro" y "antes de que llegue" en tiras de papel rasgado.
-// Valentina explica y, con "foresight", levanta el dedo: cae la tira amarilla "Eso es foresight" con una lupa.
+// Voz: "Por eso, en INNLAB, exploramos el futuro antes de que llegue. Eso es FORESIGHT."
+// En pantalla INNLAB y FORESIGHT van siempre en mayúsculas.
+// "En INNLAB" en una pastilla; "Exploramos el futuro" y "antes de que llegue" en tiras de papel rasgado.
+// Valentina explica y, con "foresight", levanta el dedo: cae la tira amarilla "Eso es FORESIGHT" con una lupa.
 import type { Frame, PostOverrides } from '../engine/scene';
 import { C, Plate, Puppet, type PupKey, at, burst, decor, doodle, ease, clamp, float, icon, inn, labelPill, measureText, pop } from './_kit';
 import { strip } from './_futuros';
@@ -34,7 +35,7 @@ export default class P2 extends Plate {
     const X = 800;
 
     at(c, X, 250, { a: inn(t, this.tInn - 0.1, 0.4), dy: (1 - inn(t, this.tInn - 0.1, 0.4)) * -16 }, () =>
-      labelPill(c, 'En InnLab', 0, 0, { fill: 'rgba(255,255,255,0.14)', col: C.blanco, size: 34, stroke: 'rgba(255,255,255,0.6)' }));
+      labelPill(c, 'En INNLAB', 0, 0, { fill: 'rgba(255,255,255,0.14)', col: C.blanco, size: 34, stroke: 'rgba(255,255,255,0.6)' }));
     at(c, X - 20, 400 + float(t, 0, 4, 1.1), { s: ease.outBack(clamp((t - this.tExp + 0.05) / 0.45), 1.4), r: -0.02 }, () =>
       strip(c, 'Exploramos el futuro', 82, C.blanco, C.azul, 3, m));
     at(c, X + 40, 560 + float(t, 1, 4, 1.2), { s: ease.outBack(clamp((t - this.tAntes + 0.05) / 0.45), 1.4), r: 0.015 }, () =>
@@ -43,7 +44,7 @@ export default class P2 extends Plate {
     const fk = clamp((t - this.tFor) / 0.22);
     if (fk > 0) {
       at(c, X, 760 + float(t, 2, 4, 1.3), { s: 1.9 - 0.9 * ease.inQuad(fk), r: -0.03, a: clamp(fk * 2) }, () => {
-        strip(c, 'Eso es foresight', 76, C.amarillo, C.azul, 9, m);
+        strip(c, 'Eso es FORESIGHT', 76, C.amarillo, C.azul, 9, m);
       });
       burst(c, X, 760, t, this.tFor + 0.22, C.amarillo, 330, 12);
     }

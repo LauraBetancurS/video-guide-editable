@@ -1,14 +1,15 @@
 // 👉 AQUÍ SE REEMPLAZA ESTE CONTENIDO
 // Dibujos compartidos del video "Panorama general" (Futuros Vivos): polaroids, íconos de los 8 aprendizajes,
 // los tres mundos (Fintech, Agrotech, modelos de negocio) y el navegador con la página del mapa.
-import { C, hexA, rrect, tape, text, tornPaper } from './_kit';
+import { C, fit, hexA, rrect, tape, text, tornPaper } from './_kit';
 
 /** Las ilustraciones de los 4 posibles futuros (app/public/ilustraciones/). */
 export const FUTUROS = [
-  { file: 'ilustraciones/esc-1.svg', label: 'Juntos negociamos', col: '#23804B' },
-  { file: 'ilustraciones/esc-2.svg', label: 'Comodidad con precio', col: '#C24E22' },
-  { file: 'ilustraciones/esc-3.svg', label: 'Dinero con reglas', col: '#3B3BC4' },
-  { file: 'ilustraciones/esc-4.svg', label: 'Máquinas, no para todos', col: '#7348E0' },
+  // Nombres cortos de los escenarios del Radar de Tendencias Globales 2026 (v2)
+  { file: 'ilustraciones/esc-1.svg', label: 'La red de cooperativas', col: '#23804B' },
+  { file: 'ilustraciones/esc-2.svg', label: 'El peaje invisible', col: '#C24E22' },
+  { file: 'ilustraciones/esc-3.svg', label: 'Dinero digital con reglas', col: '#3B3BC4' },
+  { file: 'ilustraciones/esc-4.svg', label: 'La automatización desigual', col: '#7348E0' },
 ];
 
 /** Polaroid centrada en el origen: marco blanco, foto (imagen o dibujo) y pie de foto. */
@@ -22,7 +23,7 @@ export function polaroid(c: CanvasRenderingContext2D, w: number, photo: (pw: num
   c.beginPath(); c.rect(0, 0, pw, ph); c.clip();
   photo(pw, ph);
   c.restore();
-  if (caption) text(c, caption, 0, h / 2 - 26, { w: 800, size: Math.round(w * 0.065), col: capCol, align: 'center' });
+  if (caption) text(c, caption, 0, h / 2 - 26, { w: 800, size: fit(c, caption, 800, w - 30, Math.round(w * 0.065)), col: capCol, align: 'center' });
   tape(c, 0, -h / 2 - 2, w * 0.36, -0.04 + (seed % 3) * 0.03, undefined, seed);
   return h;
 }
@@ -56,9 +57,16 @@ export function aprIcon(c: CanvasRenderingContext2D, i: number, s: number, col: 
 }
 
 /** Los 8 aprendizajes, con nombre corto. */
-export const APRENDIZAJES = [
-  'Todo conectado', 'Decidir con datos', 'Pagar por resultados', 'Una sola plataforma',
-  'Demostrar lo sostenible', 'Reglas en tiempo real', 'Dinero digital', 'Negocios que se reinventan',
+// Títulos de los 8 aprendizajes del Radar de Tendencias Globales 2026 (v2), en dos líneas.
+export const APRENDIZAJES: [string, string][] = [
+  ['Conectarse es la nueva', 'puerta de entrada'],
+  ['La tecnología decide, pero', 'alguien tiene que responder'],
+  ['Pagar por lo que se logra,', 'no por lo que se tiene'],
+  ['Quien conecta a todos', 'se queda con más valor'],
+  ['Lo sostenible solo cuenta', 'si se puede comprobar'],
+  ['Los riesgos ahora se', 'comparten entre muchos'],
+  ['El dinero digital necesita', 'confianza antes que rapidez'],
+  ['Ganan quienes saben', 'cambiar a tiempo'],
 ];
 
 /** Moneda con "$" (Fintech). */

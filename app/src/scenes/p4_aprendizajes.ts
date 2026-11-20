@@ -47,8 +47,11 @@ export default class P4 extends Plate {
       at(c, x, y + float(t, i, 4, 1.3) - lift * 18, { s: k * (1 + lift * 0.12), r: ((i % 3) - 1) * 0.02, a }, () => {
         if (lift > 0) tornPaper(c, 352, 202, C.amarillo, 30 + i, { tear: 8 });
         tornPaper(c, 330, 180, C.blanco, 10 + i, { tear: 7, shadow: lift <= 0 });
-        at(c, 0, -34, {}, () => aprIcon(c, i + 1, 54, C.azul));
-        text(c, APRENDIZAJES[i]!, 0, 50, { w: 800, size: fit(c, APRENDIZAJES[i]!, 800, 290, 26), col: C.azul, align: 'center' });
+        at(c, 0, -44, {}, () => aprIcon(c, i + 1, 48, C.azul));
+        const [l1, l2] = APRENDIZAJES[i]!;
+        const fz = Math.min(fit(c, l1, 800, 300, 23), fit(c, l2, 800, 300, 23));
+        text(c, l1, 0, 26, { w: 800, size: fz, col: C.azul, align: 'center' });
+        text(c, l2, 0, 26 + fz * 1.25, { w: 800, size: fz, col: C.azul, align: 'center' });
       });
       if (h) burst(c, x, y - 18, t, h[1] + 0.3, C.amarillo, 200, 10);
     }
